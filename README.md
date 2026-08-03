@@ -49,7 +49,7 @@ Nunca ingreses una tarjeta real.
 
 ## Identidad visual
 
-La paleta principal está definida al inicio de `index.html`: marfil, taupe, café grisáceo y carbón cálido. El logotipo editable está en `imagenes/logo-nalessa.svg`.
+La paleta principal está definida al inicio de `index.html`: marfil, taupe, café grisáceo y carbón cálido. El monograma del encabezado está integrado directamente en `index.html` para que nunca dependa de una imagen externa. También se conserva una copia editable en `imagenes/logo-nalessa.svg`.
 
 ## Panel de estrategia y resultados
 

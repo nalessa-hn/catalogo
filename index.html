@@ -117,20 +117,12 @@
             -webkit-backdrop-filter: blur(14px);
             box-shadow: 0 12px 32px rgba(46, 41, 35, 0.055);
         }
-        #inicio::before,
         #inicio::after {
             content: '';
             position: absolute;
             border-radius: 999px;
             filter: blur(4px);
             pointer-events: none;
-        }
-        #inicio::before {
-            width: 26rem;
-            height: 26rem;
-            right: -8rem;
-            top: -12rem;
-            background: rgba(165, 150, 130, 0.14);
         }
         #inicio::after {
             width: 18rem;
@@ -184,7 +176,10 @@
                 
                 <!-- Brand Logo -->
                 <a href="#" class="flex items-center gap-2 group">
-                    <img src="imagenes/logo-nalessa.svg" alt="Logo NALESSA" class="h-10 w-10 rounded-full object-cover">
+                    <svg viewBox="0 0 100 100" role="img" aria-label="Monograma NALESSA" class="h-10 w-10 flex-none rounded-full shadow-sm" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#f7f3ec" stroke="#746858" stroke-width="2"/>
+                        <text x="50" y="69" text-anchor="middle" fill="#746858" font-family="Georgia, 'Times New Roman', serif" font-size="58">N</text>
+                    </svg>
                     <span class="text-xl font-serif font-bold tracking-[0.22em] text-nalessa-dark group-hover:text-nalessa-gold transition-colors uppercase pl-1">
                         NALESSA
                     </span>
@@ -301,15 +296,6 @@
                             </div>
                         </div>
 
-                        <div class="absolute -bottom-5 -left-5 bg-white text-nalessa-dark p-4 rounded-2xl shadow-2xl border border-nalessa-blush hidden sm:flex items-center gap-3">
-                            <div class="bg-nalessa-blush text-nalessa-plum p-3 rounded-xl text-lg font-serif">
-                                <i class="fa-solid fa-crown text-nalessa-gold"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold uppercase tracking-wider text-nalessa-dark">Marcas de referencia</p>
-                                <p class="text-[11px] text-gray-500">Coach • Vizzano • Neutrogena • Oriflame</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -971,10 +957,10 @@
             
             <div class="text-center mb-6">
                 <div class="inline-flex items-center gap-2 bg-nalessa-soft text-nalessa-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-2 border border-nalessa-blush">
-                    <i class="fa-solid fa-shield-halved text-nalessa-rose"></i> Simulación segura • Utiliza únicamente datos inventados
+                    <i class="fa-solid fa-shield-halved text-nalessa-rose"></i> Modo de prueba • Utiliza datos ficticios
                 </div>
                 <h3 id="checkoutTitle" class="text-2xl font-bold font-serif text-nalessa-dark">Pago con tarjeta</h3>
-                <p class="text-xs text-gray-500 mt-1">Este formulario valida el flujo visual, pero no procesa cargos ni guarda datos financieros.</p>
+                <p class="text-xs text-gray-500 mt-1">Completa la información para revisar el flujo de pago.</p>
             </div>
 
             <form id="paymentForm" onsubmit="processPayment(event)" autocomplete="off" class="space-y-4">
@@ -1033,7 +1019,7 @@
 
                     <div id="cardFields" class="space-y-3 pt-2">
                         <div class="bg-nalessa-soft border border-nalessa-blush text-nalessa-dark rounded-xl p-3 text-[11px] leading-relaxed">
-                            <strong>Validación local:</strong> escribe 16 dígitos inventados, una fecha posterior al mes actual y un CVC de 3 o 4 dígitos. No uses datos reales.
+                            <strong>Formato requerido:</strong> número de 16 dígitos, una fecha posterior al mes actual y un CVC de 3 o 4 dígitos.
                         </div>
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold text-gray-500 uppercase">Tarjetas aceptadas:</span>
@@ -1099,14 +1085,14 @@
                 </div>
 
                 <button type="submit" id="paySubmitBtn" class="w-full bg-nalessa-gold hover:bg-nalessa-goldHover text-nalessa-dark font-bold py-3.5 rounded-xl shadow-xl transition-all uppercase text-xs tracking-widest flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-lock text-sm"></i> Validar pago simulado
+                    <i class="fa-solid fa-lock text-sm"></i> Confirmar simulación
                 </button>
             </form>
 
             <div id="paymentLoadingOverlay" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center text-center p-6 z-20">
                 <div class="w-16 h-16 border-4 border-nalessa-blush border-t-nalessa-gold rounded-full animate-spin mb-4"></div>
                 <h4 class="text-lg font-serif font-bold text-nalessa-dark">Validando información...</h4>
-                <p class="text-xs text-gray-500 max-w-xs mt-1">Comprobando el formato localmente. No se realizará ningún cargo.</p>
+                <p class="text-xs text-gray-500 max-w-xs mt-1">Comprobando los datos ingresados.</p>
             </div>
         </div>
     </div>
