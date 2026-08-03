@@ -33,6 +33,10 @@ No borres comas, llaves o comillas del bloque de productos.
 
 Los pedidos se envían al número `+504 8858-9904`. En el código se utiliza el formato internacional `50488589904`.
 
+## Blog
+
+Los enlaces **Blog** del menú y del pie de página abren `https://nicolemusa.blogspot.com/` en una pestaña nueva.
+
 ## Pago con tarjeta simulado
 
 El flujo valida el formato en el navegador, pero no procesa dinero ni almacena información financiera. Utiliza únicamente datos inventados:

@@ -23,7 +23,8 @@
       "description": "Boutique de perfumería, skincare y calzado con pedidos asistidos por WhatsApp en Honduras.",
       "areaServed": { "@type": "Country", "name": "Honduras" },
       "currenciesAccepted": "HNL",
-      "paymentAccepted": "Coordinación por WhatsApp"
+      "paymentAccepted": "Coordinación por WhatsApp",
+      "sameAs": ["https://nicolemusa.blogspot.com/"]
     }
     </script>
     
@@ -68,6 +69,10 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f7f3ec;
+            background-image:
+                radial-gradient(circle at 8% 18%, rgba(165, 150, 130, 0.16), transparent 30rem),
+                radial-gradient(circle at 92% 45%, rgba(116, 104, 88, 0.10), transparent 28rem);
+            background-attachment: fixed;
             color: #2e2923;
         }
         h1, h2, h3, h4, .font-serif {
@@ -93,11 +98,62 @@
         }
         .catalog-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 253, 249, 0.82) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
         .catalog-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 20px 25px -5px rgba(46, 41, 35, 0.12), 0 8px 10px -6px rgba(46, 41, 35, 0.06);
         }
+        #beneficios .bg-nalessa-soft,
+        #mas-vendidos .bg-white,
+        #skin-quiz .skin-card,
+        #catalogo > .bg-white,
+        #testimonios .bg-nalessa-soft,
+        #faq .bg-white {
+            background: rgba(255, 253, 249, 0.72) !important;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 12px 32px rgba(46, 41, 35, 0.055);
+        }
+        #inicio::before,
+        #inicio::after {
+            content: '';
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(4px);
+            pointer-events: none;
+        }
+        #inicio::before {
+            width: 26rem;
+            height: 26rem;
+            right: -8rem;
+            top: -12rem;
+            background: rgba(165, 150, 130, 0.14);
+        }
+        #inicio::after {
+            width: 18rem;
+            height: 18rem;
+            left: -7rem;
+            bottom: -10rem;
+            background: rgba(247, 243, 236, 0.06);
+        }
+        .hero-glass {
+            background: linear-gradient(145deg, rgba(116, 104, 88, 0.66), rgba(46, 41, 35, 0.72)) !important;
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 28px 70px rgba(18, 16, 14, 0.30);
+        }
+        #cartDrawer .pointer-events-auto,
+        #quickViewModal > .relative,
+        #checkoutModal > .relative,
+        #receiptModal > .relative {
+            background: rgba(255, 253, 249, 0.94) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        section { scroll-margin-top: 4.5rem; }
         :focus-visible {
             outline: 3px solid #a59682;
             outline-offset: 3px;
@@ -124,27 +180,28 @@
     <!-- Header Navigation -->
     <header class="sticky top-0 z-40 bg-nalessa-soft/95 backdrop-blur-md border-b border-nalessa-blush/80 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between h-16">
                 
                 <!-- Brand Logo -->
                 <a href="#" class="flex items-center gap-2 group">
-                    <img src="imagenes/logo-nalessa.svg" alt="Logo NALESSA" class="h-12 w-12 rounded-full object-cover">
-                    <span class="text-2xl font-serif font-bold tracking-[0.25em] text-nalessa-dark group-hover:text-nalessa-gold transition-colors uppercase pl-1">
+                    <img src="imagenes/logo-nalessa.svg" alt="Logo NALESSA" class="h-10 w-10 rounded-full object-cover">
+                    <span class="text-xl font-serif font-bold tracking-[0.22em] text-nalessa-dark group-hover:text-nalessa-gold transition-colors uppercase pl-1">
                         NALESSA
                     </span>
                 </a>
 
                 <!-- Desktop Navigation Menu -->
-                <nav class="hidden lg:flex items-center space-x-7 font-medium text-xs tracking-widest uppercase text-nalessa-dark">
+                <nav class="hidden xl:flex items-center space-x-5 font-medium text-[11px] tracking-wider uppercase text-nalessa-dark">
                     <a href="#inicio" class="hover:text-nalessa-gold transition-colors py-1">Inicio</a>
                     <a href="#beneficios" class="hover:text-nalessa-gold transition-colors py-1">¿Por qué Nalessa?</a>
                     <a href="#mas-vendidos" class="hover:text-nalessa-gold transition-colors py-1">Destacados</a>
                     <a href="#skin-quiz" class="hover:text-nalessa-gold transition-colors py-1 text-nalessa-rose font-semibold flex items-center gap-1">
                         <i class="fa-solid fa-sparkles text-xs"></i> Test Tipo de Piel
                     </a>
-                    <a href="#catalogo" class="hover:text-nalessa-gold transition-colors py-1">Catálogo General</a>
-                    <a href="#guias" class="hover:text-nalessa-gold transition-colors py-1">Guías & Tallas</a>
+                    <a href="#catalogo" class="hover:text-nalessa-gold transition-colors py-1">Catálogo</a>
+                    <a href="#guias" class="hover:text-nalessa-gold transition-colors py-1">Guías</a>
                     <a href="#mayoristas" class="hover:text-nalessa-gold transition-colors py-1 text-nalessa-gold font-bold">Emprendedores</a>
+                    <a href="https://nicolemusa.blogspot.com/" target="_blank" rel="noopener" class="hover:text-nalessa-gold transition-colors py-1 flex items-center gap-1">Blog <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></a>
                 </nav>
 
                 <!-- Search & Cart Buttons -->
@@ -161,7 +218,7 @@
                         </span>
                     </button>
 
-                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-nalessa-dark text-xl">
+                    <button onclick="toggleMobileMenu()" class="xl:hidden p-2 text-nalessa-dark text-xl">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -169,7 +226,7 @@
         </div>
 
         <!-- Mobile Nav Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-nalessa-blush px-4 pt-3 pb-6 space-y-3">
+        <div id="mobileMenu" class="hidden xl:hidden bg-white/90 backdrop-blur-xl border-b border-nalessa-blush px-4 pt-3 pb-6 space-y-3">
             <div class="mb-3">
                 <input type="text" id="mobileSearchInput" oninput="syncAndFilter(this.value)" placeholder="Buscar productos..." class="w-full bg-nalessa-soft border border-nalessa-blush rounded-lg text-sm py-2 px-3 text-nalessa-dark">
             </div>
@@ -180,23 +237,24 @@
             <a href="#catalogo" onclick="toggleMobileMenu()" class="block text-nalessa-dark font-medium hover:text-nalessa-gold">Catálogo General</a>
             <a href="#guias" onclick="toggleMobileMenu()" class="block text-nalessa-dark font-medium hover:text-nalessa-gold">Guías Olfativas & Tallas</a>
             <a href="#mayoristas" onclick="toggleMobileMenu()" class="block text-nalessa-gold font-bold">Sección Mayoristas</a>
+            <a href="https://nicolemusa.blogspot.com/" target="_blank" rel="noopener" onclick="toggleMobileMenu()" class="block text-nalessa-dark font-bold hover:text-nalessa-gold">Blog <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i></a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative overflow-hidden bg-nalessa-dark text-white py-20 lg:py-28 border-b border-nalessa-gold/30">
+    <section id="inicio" class="relative overflow-hidden bg-nalessa-dark text-white py-16 lg:py-20 border-b border-nalessa-gold/30">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#a59682_1px,transparent_1px)] [background-size:24px_24px]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 bg-nalessa-plum border border-nalessa-gold/40 px-4 py-1.5 rounded-full">
                         <span class="w-2 h-2 rounded-full bg-nalessa-gold animate-pulse"></span>
                         <span class="text-nalessa-blush text-[11px] font-medium tracking-[0.2em] uppercase">Boutique de belleza y estilo</span>
                     </div>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-light leading-tight tracking-wide">
+                    <h1 class="text-4xl sm:text-5xl lg:text-[3.45rem] font-serif font-light leading-[1.05] tracking-wide">
                         Elegancia Distinguida, <br>
                         <span class="italic font-normal text-nalessa-gold">Perfumería Original</span>, Skincare & Calzado
                     </h1>
@@ -215,26 +273,27 @@
                     </div>
 
                     <!-- Statistics Banner -->
-                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-nalessa-gold/20 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+                    <div class="grid grid-cols-3 gap-3 pt-5 border-t border-nalessa-gold/20 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
                         <div>
-                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">Curado</span>
-                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Catálogo seleccionado</span>
+                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">100%</span>
+                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Marcas originales</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">Honduras</span>
-                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Cobertura nacional</span>
+                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">+5,000</span>
+                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Clientes satisfechos</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">WhatsApp</span>
-                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Pedido directo</span>
+                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">24–48h</span>
+                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Envío express*</span>
                         </div>
                     </div>
+                    <p class="text-[9px] text-nalessa-blush/60 max-w-xl mx-auto lg:mx-0">*Tiempo estimado sujeto a ubicación, disponibilidad y confirmación por WhatsApp.</p>
                 </div>
 
                 <!-- Hero Image Card -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-md">
-                        <div class="bg-gradient-to-b from-nalessa-plum to-nalessa-dark p-3 rounded-3xl border border-nalessa-gold/30 shadow-2xl overflow-hidden">
+                        <div class="hero-glass bg-gradient-to-b from-nalessa-plum to-nalessa-dark p-3 rounded-3xl border border-white/15 shadow-2xl overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800" alt="Productos Nalessa Collection" class="w-full h-80 object-cover rounded-2xl">
                             <div class="p-4 text-center">
                                 <span class="text-[10px] tracking-[0.3em] uppercase text-nalessa-gold font-semibold">Selección NALESSA</span>
@@ -308,7 +367,7 @@
     </section>
 
     <!-- NEW SECTION: TRENDS & FEATURED HIGHLIGHTS -->
-    <section id="mas-vendidos" class="py-16 bg-nalessa-soft border-b border-nalessa-blush">
+    <section id="mas-vendidos" class="py-12 bg-nalessa-soft/70 border-b border-nalessa-blush">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <span class="text-nalessa-rose font-bold text-xs tracking-[0.25em] uppercase">Colección Destacada</span>
@@ -378,7 +437,7 @@
     </section>
 
     <!-- SKIN DIAGNOSIS QUIZ SECTION -->
-    <section id="skin-quiz" class="py-16 bg-nalessa-blush/40 border-b border-nalessa-blush">
+    <section id="skin-quiz" class="py-12 bg-nalessa-blush/30 border-b border-nalessa-blush">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <span class="text-nalessa-rose font-bold text-xs tracking-[0.25em] uppercase">Diagnóstico Personalizado</span>
@@ -453,7 +512,7 @@
     </section>
 
     <!-- MAIN CATALOG SECTION: ENHANCED CUADROS / CARDS LAYOUT -->
-    <section id="catalogo" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="catalogo" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-10">
             <span class="text-nalessa-gold font-bold text-xs tracking-[0.25em] uppercase">Galería & Boutique</span>
@@ -517,7 +576,7 @@
     </section>
 
     <!-- NEW SECTION: INTERACTIVE GUIDES & SIZE CHARTS -->
-    <section id="guias" class="py-16 bg-white border-y border-nalessa-blush">
+    <section id="guias" class="py-12 bg-white/70 border-y border-nalessa-blush backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <span class="text-nalessa-gold font-bold text-xs tracking-[0.25em] uppercase">Guías & Consejos</span>
@@ -590,7 +649,7 @@
     </section>
 
     <!-- NEW SECTION: WHOLESALE CALCULATOR & PROGRAM FOR EMPRENDEDORES -->
-    <section id="mayoristas" class="bg-gradient-to-br from-nalessa-dark via-nalessa-plum to-nalessa-dark text-white py-16 border-t border-nalessa-gold/30">
+    <section id="mayoristas" class="bg-gradient-to-br from-nalessa-dark via-nalessa-plum to-nalessa-dark text-white py-12 border-t border-nalessa-gold/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
@@ -670,7 +729,7 @@
     </section>
 
     <!-- SERVICE COMMITMENTS -->
-    <section id="testimonios" class="py-16 bg-white border-b border-nalessa-blush">
+    <section id="testimonios" class="py-12 bg-white/65 border-b border-nalessa-blush backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-nalessa-gold font-bold text-xs tracking-[0.25em] uppercase">Experiencia NALESSA</span>
@@ -701,7 +760,7 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="py-16 bg-nalessa-soft/60 border-b border-nalessa-blush">
+    <section id="faq" class="py-12 bg-nalessa-soft/50 border-b border-nalessa-blush">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-nalessa-rose font-bold text-xs tracking-[0.25em] uppercase">Preguntas Frecuentes</span>
@@ -770,9 +829,9 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-nalessa-dark text-nalessa-blush pt-16 pb-8 border-t border-nalessa-plum">
+    <footer class="bg-nalessa-dark text-nalessa-blush pt-12 pb-6 border-t border-nalessa-plum">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-nalessa-plum">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-nalessa-plum">
                 
                 <div class="space-y-4">
                     <div class="flex items-center gap-2">
@@ -812,16 +871,21 @@
                         <i class="fa-solid fa-building-columns hover:text-white transition-colors"></i>
                         <i class="fa-solid fa-shield-halved text-emerald-500"></i>
                     </div>
+                    <a href="https://nicolemusa.blogspot.com/" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 rounded-full border border-nalessa-gold/35 bg-white/5 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-nalessa-blush hover:bg-white/10 hover:text-white transition-all">
+                        Visitar nuestro blog <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
 
             </div>
 
-            <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="pt-6 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 NALESSA Collection. Todos los derechos reservados.</p>
                 <div class="flex gap-4 text-xs">
                     <a href="#faq" class="hover:text-white">Preguntas Frecuentes</a>
                     <span>•</span>
                     <a href="#beneficios" class="hover:text-white">Garantía de Autenticidad</a>
+                    <span>•</span>
+                    <a href="https://nicolemusa.blogspot.com/" target="_blank" rel="noopener" class="hover:text-white">Blog</a>
                 </div>
             </div>
         </div>
@@ -1396,7 +1460,7 @@
 
             if(filtered.length === 0) {
                 grid.innerHTML = `
-                    <div class="col-span-full py-16 text-center text-gray-500 bg-white rounded-3xl border border-nalessa-blush p-8">
+                    <div class="col-span-full py-12 text-center text-gray-500 bg-white/80 rounded-3xl border border-nalessa-blush p-6 backdrop-blur-xl">
                         <i class="fa-solid fa-magnifying-glass text-4xl text-nalessa-gold mb-3"></i>
                         <p class="font-serif text-lg text-nalessa-dark font-bold">No se encontraron productos en cuadros para "${searchVal}"</p>
                         <p class="text-xs text-gray-400 mt-1">Intenta buscar por marca (ej: Coach, Vizzano, Neutrogena, Oriflame).</p>
@@ -1414,10 +1478,10 @@
                 ).join('');
 
                 return `
-                    <div class="catalog-card bg-white rounded-3xl overflow-hidden border border-nalessa-blush/80 shadow-sm flex flex-col justify-between group relative">
+                    <div class="catalog-card bg-white rounded-2xl overflow-hidden border border-nalessa-blush/80 shadow-sm flex flex-col justify-between group relative">
                         <div>
                             <!-- Card Header Image Container -->
-                            <div class="relative overflow-hidden h-64 bg-nalessa-soft">
+                            <div class="relative overflow-hidden h-52 bg-nalessa-soft">
                                 <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 
                                 <span class="absolute top-3 left-3 bg-nalessa-dark/90 text-nalessa-gold text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-xs">
@@ -1430,7 +1494,7 @@
                             </div>
 
                             <!-- Card Body -->
-                            <div class="p-5 space-y-2">
+                            <div class="p-4 space-y-2">
                                 <div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
                                     <span class="text-nalessa-gold"><i class="fa-solid fa-tag text-[9px] mr-1"></i>${p.brand}</span>
                                     <div class="flex items-center gap-0.5 text-[10px]">
@@ -1444,7 +1508,7 @@
                         </div>
 
                         <!-- Card Footer -->
-                        <div class="p-5 pt-0">
+                        <div class="p-4 pt-0">
                             <div class="pt-3 border-t border-nalessa-blush/60 flex items-center justify-between">
                                 <div>
                                     <span class="text-[9px] text-gray-400 uppercase block font-semibold">Precio</span>
