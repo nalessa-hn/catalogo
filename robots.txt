@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nalessa-hn.github.io/catalogo/sitemap.xml

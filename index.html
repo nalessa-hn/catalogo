@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NALESSA | Perfumería, Skincare y Calzado</title>
-    <meta name="description" content="Catálogo académico de NALESSA: perfumería, skincare, calzado y pedidos directos por WhatsApp en Honduras.">
-    <meta name="theme-color" content="#1e0e15">
+    <meta name="description" content="Catálogo de NALESSA: perfumería, skincare, calzado y pedidos directos por WhatsApp en Honduras.">
+    <meta name="theme-color" content="#2e2923">
     <meta property="og:title" content="NALESSA | Catálogo Digital">
-    <meta property="og:description" content="Explora perfumes, skincare y calzado. Proyecto académico con pedidos por WhatsApp.">
+    <meta property="og:description" content="Explora perfumes, skincare y calzado con atención personalizada y pedidos directos por WhatsApp.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nalessa-hn.github.io/catalogo/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&amp;fit=crop&amp;q=80&amp;w=1200">
+    <link rel="canonical" href="https://nalessa-hn.github.io/catalogo/">
+    <link rel="icon" href="imagenes/logo-nalessa.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "OnlineStore",
+      "name": "NALESSA",
+      "url": "https://nalessa-hn.github.io/catalogo/",
+      "telephone": "+504 8858-9904",
+      "description": "Boutique de perfumería, skincare y calzado con pedidos asistidos por WhatsApp en Honduras.",
+      "areaServed": { "@type": "Country", "name": "Honduras" },
+      "currenciesAccepted": "HNL",
+      "paymentAccepted": "Coordinación por WhatsApp"
+    }
+    </script>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,15 +44,15 @@
                 extend: {
                     colors: {
                         nalessa: {
-                            dark: '#1e0e15',
-                            plum: '#341a25',
-                            gold: '#cbb087',
-                            goldHover: '#b5986d',
-                            rose: '#cb8e76',
-                            blush: '#f5ebe6',
-                            soft: '#fdfbf7',
-                            cardBg: '#ffffff',
-                            muted: '#6e5e65'
+                            dark: '#2e2923',
+                            plum: '#746858',
+                            gold: '#a59682',
+                            goldHover: '#8c7d69',
+                            rose: '#b8ab99',
+                            blush: '#e8e1d7',
+                            soft: '#f7f3ec',
+                            cardBg: '#fffdf9',
+                            muted: '#6f675e'
                         }
                     },
                     fontFamily: {
@@ -50,8 +67,8 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #fdfbf7;
-            color: #1e0e15;
+            background-color: #f7f3ec;
+            color: #2e2923;
         }
         h1, h2, h3, h4, .font-serif {
             font-family: 'Cormorant Garamond', serif;
@@ -60,29 +77,29 @@
             width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f5ebe6;
+            background: #e8e1d7;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cb8e76;
+            background: #a59682;
             border-radius: 4px;
         }
         .skin-card.active {
-            border-color: #cbb087;
-            background-color: #341a25;
+            border-color: #a59682;
+            background-color: #746858;
             color: #ffffff;
         }
         .skin-card.active p {
-            color: #f5ebe6;
+            color: #f7f3ec;
         }
         .catalog-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .catalog-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 25px -5px rgba(30, 14, 21, 0.1), 0 8px 10px -6px rgba(30, 14, 21, 0.05);
+            box-shadow: 0 20px 25px -5px rgba(46, 41, 35, 0.12), 0 8px 10px -6px rgba(46, 41, 35, 0.06);
         }
         :focus-visible {
-            outline: 3px solid #cbb087;
+            outline: 3px solid #a59682;
             outline-offset: 3px;
         }
         @media print {
@@ -95,15 +112,11 @@
 </head>
 <body class="antialiased selection:bg-nalessa-rose selection:text-white">
 
-    <div class="bg-nalessa-gold text-nalessa-dark text-[10px] sm:text-xs py-2 px-4 text-center font-bold tracking-widest uppercase">
-        <i class="fa-solid fa-graduation-cap mr-1"></i> Proyecto académico universitario • Catálogo demostrativo
-    </div>
-
     <!-- Top Announcement Bar -->
     <div class="bg-nalessa-dark text-nalessa-blush text-xs py-2 px-4 text-center font-medium tracking-widest uppercase flex items-center justify-center gap-3 border-b border-nalessa-gold/20">
         <span><i class="fa-solid fa-truck-fast text-nalessa-gold mr-1"></i> Envíos Seguros a Todo el País</span>
         <span class="hidden md:inline">•</span>
-        <span class="hidden md:inline"><i class="fa-solid fa-gem text-nalessa-gold mr-1"></i> Perfumería & Skincare 100% Original</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-gem text-nalessa-gold mr-1"></i> Perfumería, Skincare & Estilo</span>
         <span class="hidden md:inline">•</span>
         <span class="hidden md:inline"><i class="fa-solid fa-handshake-angle text-nalessa-gold mr-1"></i> Precios Especiales Mayoristas</span>
     </div>
@@ -115,9 +128,7 @@
                 
                 <!-- Brand Logo -->
                 <a href="#" class="flex items-center gap-2 group">
-                    <div class="h-10 w-8 flex items-center justify-center">
-                        <span class="font-serif text-3xl font-light text-nalessa-gold tracking-tighter group-hover:text-nalessa-rose transition-colors" style="transform: scaleY(1.3);">N</span>
-                    </div>
+                    <img src="imagenes/logo-nalessa.svg" alt="Logo NALESSA" class="h-12 w-12 rounded-full object-cover">
                     <span class="text-2xl font-serif font-bold tracking-[0.25em] text-nalessa-dark group-hover:text-nalessa-gold transition-colors uppercase pl-1">
                         NALESSA
                     </span>
@@ -174,7 +185,7 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="relative overflow-hidden bg-nalessa-dark text-white py-20 lg:py-28 border-b border-nalessa-gold/30">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#cbb087_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#a59682_1px,transparent_1px)] [background-size:24px_24px]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -182,7 +193,7 @@
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 bg-nalessa-plum border border-nalessa-gold/40 px-4 py-1.5 rounded-full">
                         <span class="w-2 h-2 rounded-full bg-nalessa-gold animate-pulse"></span>
-                        <span class="text-nalessa-blush text-[11px] font-medium tracking-[0.2em] uppercase">Boutique & Distribución Oficial</span>
+                        <span class="text-nalessa-blush text-[11px] font-medium tracking-[0.2em] uppercase">Boutique de belleza y estilo</span>
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-light leading-tight tracking-wide">
@@ -191,12 +202,12 @@
                     </h1>
 
                     <p class="text-nalessa-blush/90 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        Curaduría exclusiva en fragancias de diseñador garantizadas, rutinas avanzadas de Skincare y el confort de alta costura del calzado brasileño Vizzano.
+                        Una selección cuidada de fragancias, skincare y calzado para acompañar tu estilo, con atención personalizada y pedidos directos por WhatsApp.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                         <a href="#catalogo" class="bg-nalessa-gold hover:bg-nalessa-goldHover text-nalessa-dark font-bold px-8 py-3.5 rounded-full transition-all text-xs tracking-[0.2em] uppercase shadow-lg text-center">
-                            Explorar Catálogo en Cuadros
+                            Explorar catálogo
                         </a>
                         <a href="#skin-quiz" class="bg-transparent border border-nalessa-blush/40 hover:border-nalessa-gold text-nalessa-blush font-semibold px-8 py-3.5 rounded-full transition-all text-xs tracking-[0.2em] uppercase text-center flex items-center justify-center gap-2">
                             <i class="fa-solid fa-wand-magic-sparkles text-nalessa-gold"></i> Test Tipo de Piel
@@ -206,12 +217,12 @@
                     <!-- Statistics Banner -->
                     <div class="grid grid-cols-3 gap-4 pt-6 border-t border-nalessa-gold/20 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
                         <div>
-                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">100%</span>
-                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Marcas Originales</span>
+                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">Curado</span>
+                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Catálogo seleccionado</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">12</span>
-                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Productos de muestra</span>
+                            <span class="block text-2xl font-serif font-bold text-nalessa-gold">Honduras</span>
+                            <span class="text-[10px] uppercase text-gray-300 tracking-wider">Cobertura nacional</span>
                         </div>
                         <div>
                             <span class="block text-2xl font-serif font-bold text-nalessa-gold">WhatsApp</span>
@@ -226,7 +237,7 @@
                         <div class="bg-gradient-to-b from-nalessa-plum to-nalessa-dark p-3 rounded-3xl border border-nalessa-gold/30 shadow-2xl overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800" alt="Productos Nalessa Collection" class="w-full h-80 object-cover rounded-2xl">
                             <div class="p-4 text-center">
-                                <span class="text-[10px] tracking-[0.3em] uppercase text-nalessa-gold font-semibold">Garantía de Autenticidad</span>
+                                <span class="text-[10px] tracking-[0.3em] uppercase text-nalessa-gold font-semibold">Selección NALESSA</span>
                                 <h3 class="text-xl font-serif text-white mt-0.5">Lujo Accesible & Cuidado Personal</h3>
                             </div>
                         </div>
@@ -257,8 +268,8 @@
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-xs uppercase tracking-wider text-nalessa-dark">100% Auténtico</h4>
-                        <p class="text-[11px] text-gray-500 mt-0.5">Productos con sello de lote y garantía de fábrica.</p>
+                        <h4 class="font-bold text-xs uppercase tracking-wider text-nalessa-dark">Compra informada</h4>
+                        <p class="text-[11px] text-gray-500 mt-0.5">Detalles, presentación y disponibilidad confirmados antes del pedido.</p>
                     </div>
                 </div>
 
@@ -267,8 +278,8 @@
                         <i class="fa-solid fa-truck-fast"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-xs uppercase tracking-wider text-nalessa-dark">Envíos Rápidos</h4>
-                        <p class="text-[11px] text-gray-500 mt-0.5">Coordinación nacional segura de 24 a 48h.</p>
+                        <h4 class="font-bold text-xs uppercase tracking-wider text-nalessa-dark">Envíos nacionales</h4>
+                        <p class="text-[11px] text-gray-500 mt-0.5">Tiempo y cobertura se confirman según tu ciudad o municipio.</p>
                     </div>
                 </div>
 
@@ -278,7 +289,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-xs uppercase tracking-wider text-nalessa-dark">Compra Flexible</h4>
-                        <p class="text-[11px] text-gray-500 mt-0.5">Carrito de demostración y pedidos reales por WhatsApp.</p>
+                        <p class="text-[11px] text-gray-500 mt-0.5">Arma tu carrito y confirma existencias por WhatsApp.</p>
                     </div>
                 </div>
 
@@ -592,7 +603,7 @@
                         <span class="text-nalessa-gold italic">Lotes Mayoristas Nalessa</span>
                     </h2>
                     <p class="text-nalessa-blush/80 text-xs sm:text-sm leading-relaxed">
-                        Accede a precios directos de distribuidor en calzado brasileño Vizzano y cajas de perfumería importada con garantías de autenticidad y factura fiscal.
+                        Consulta lotes surtidos de calzado y perfumería para reventa. La composición, disponibilidad, precio y documentación se confirman antes de formalizar el pedido.
                     </p>
 
                     <div class="space-y-3 pt-2">
@@ -658,56 +669,32 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS & REVIEWS SECTION -->
+    <!-- SERVICE COMMITMENTS -->
     <section id="testimonios" class="py-16 bg-white border-b border-nalessa-blush">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-nalessa-gold font-bold text-xs tracking-[0.25em] uppercase">Experiencia Nalessa</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-nalessa-dark mt-1">Lo que Dicen Nuestros Clientes</h2>
-                <p class="text-gray-600 text-xs sm:text-sm mt-2">La confianza de quienes eligen la auténtica elegancia y el confort de nuestras colecciones.</p>
+                <span class="text-nalessa-gold font-bold text-xs tracking-[0.25em] uppercase">Experiencia NALESSA</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-nalessa-dark mt-1">Nuestro compromiso contigo</h2>
+                <p class="text-gray-600 text-xs sm:text-sm mt-2">Información clara, acompañamiento cercano y confirmación de cada detalle antes de cerrar tu pedido.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-nalessa-soft p-6 rounded-3xl border border-nalessa-blush shadow-sm space-y-4">
-                    <div class="flex text-amber-400 gap-1 text-sm">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-xs text-gray-700 leading-relaxed italic">"Compré el perfume Coach Blue y la textura del zapato Vizzano borgoña. Los perfumes vienen en caja sellada 100% originales y la pasarela de pago bancario funcionó súper rápido."</p>
-                    <div class="flex items-center gap-3 pt-2 border-t border-nalessa-blush/60">
-                        <div class="w-10 h-10 rounded-full bg-nalessa-plum text-nalessa-gold flex items-center justify-center font-serif font-bold text-sm">CR</div>
-                        <div>
-                            <h4 class="text-xs font-bold text-nalessa-dark">Carolina Ramírez</h4>
-                            <span class="text-[10px] text-gray-400">Tegucigalpa • Cliente Verificada</span>
-                        </div>
-                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-nalessa-plum text-nalessa-soft flex items-center justify-center text-xl"><i class="fa-solid fa-comments"></i></div>
+                    <h3 class="font-serif text-xl font-bold text-nalessa-dark">Atención personalizada</h3>
+                    <p class="text-xs text-gray-700 leading-relaxed">Confirma disponibilidad, presentación, talla y cobertura de entrega directamente con nuestro equipo por WhatsApp.</p>
                 </div>
 
                 <div class="bg-nalessa-soft p-6 rounded-3xl border border-nalessa-blush shadow-sm space-y-4">
-                    <div class="flex text-amber-400 gap-1 text-sm">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-xs text-gray-700 leading-relaxed italic">"Inicié mi tienda con el lote mayorista de calzado Vizzano. El margen de ganancia fue excelente y la atención por WhatsApp para el envío a San Pedro Sula fue muy formal."</p>
-                    <div class="flex items-center gap-3 pt-2 border-t border-nalessa-blush/60">
-                        <div class="w-10 h-10 rounded-full bg-nalessa-rose text-white flex items-center justify-center font-serif font-bold text-sm">LH</div>
-                        <div>
-                            <h4 class="text-xs font-bold text-nalessa-dark">Lic. Luisa Hernández</h4>
-                            <span class="text-[10px] text-gray-400">San Pedro Sula • Emprendedora</span>
-                        </div>
-                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-nalessa-gold text-nalessa-dark flex items-center justify-center text-xl"><i class="fa-solid fa-box-open"></i></div>
+                    <h3 class="font-serif text-xl font-bold text-nalessa-dark">Pedido revisado</h3>
+                    <p class="text-xs text-gray-700 leading-relaxed">Antes de coordinar el envío revisamos contigo productos, cantidades, total y datos de entrega para evitar confusiones.</p>
                 </div>
 
                 <div class="bg-nalessa-soft p-6 rounded-3xl border border-nalessa-blush shadow-sm space-y-4">
-                    <div class="flex text-amber-400 gap-1 text-sm">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-xs text-gray-700 leading-relaxed italic">"Hice el Test de Piel y me recomendó los productos Neutrogena Hydro Boost y la Niacinamida. Mi piel cambió notablemente en dos semanas. ¡100% recomendado!"</p>
-                    <div class="flex items-center gap-3 pt-2 border-t border-nalessa-blush/60">
-                        <div class="w-10 h-10 rounded-full bg-nalessa-gold text-nalessa-dark flex items-center justify-center font-serif font-bold text-sm">AM</div>
-                        <div>
-                            <h4 class="text-xs font-bold text-nalessa-dark">Andrea Mendoza</h4>
-                            <span class="text-[10px] text-gray-400">La Entrada, Copán • Cliente Verificada</span>
-                        </div>
-                    </div>
+                    <div class="w-12 h-12 rounded-2xl bg-nalessa-dark text-nalessa-gold flex items-center justify-center text-xl"><i class="fa-solid fa-leaf"></i></div>
+                    <h3 class="font-serif text-xl font-bold text-nalessa-dark">Orientación responsable</h3>
+                    <p class="text-xs text-gray-700 leading-relaxed">Las guías de skincare son informativas. Recomendamos revisar ingredientes y consultar a un profesional ante condiciones especiales.</p>
                 </div>
             </div>
         </div>
@@ -719,7 +706,7 @@
             <div class="text-center mb-12">
                 <span class="text-nalessa-rose font-bold text-xs tracking-[0.25em] uppercase">Preguntas Frecuentes</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-nalessa-dark mt-1">¿Tienes Dudas sobre tu Compra?</h2>
-                <p class="text-gray-600 text-xs sm:text-sm mt-2">Todo lo que necesitas saber sobre pasarelas de pago, envíos y garantía de productos.</p>
+                <p class="text-gray-600 text-xs sm:text-sm mt-2">Todo lo que necesitas saber sobre pedidos, envíos y características de los productos.</p>
             </div>
 
             <div class="space-y-4">
@@ -729,17 +716,17 @@
                         <i id="faqIcon-1" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div id="faqContent-1" class="hidden px-5 pb-5 text-xs text-gray-600 leading-relaxed border-t border-nalessa-blush/40 pt-3">
-                        Puedes probar el carrito y generar un resumen demostrativo. Para realizar un pedido real, utiliza el botón de WhatsApp; allí podrás confirmar existencias, entrega y forma de pago directamente con NALESSA.
+                        Puedes organizar tus productos en el carrito y confirmar el pedido por WhatsApp. El pago con tarjeta está disponible únicamente en un entorno de prueba que no procesa dinero real.
                     </div>
                 </div>
 
                 <div class="bg-white border border-nalessa-blush rounded-2xl overflow-hidden shadow-sm">
                     <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-bold font-serif text-sm text-nalessa-dark flex justify-between items-center focus:outline-none">
-                        <span><i class="fa-solid fa-shield-halved text-nalessa-gold mr-2"></i> ¿Los perfumes y productos de skincare son 100% originales?</span>
+                        <span><i class="fa-solid fa-shield-halved text-nalessa-gold mr-2"></i> ¿Cómo verifico la presentación de un producto?</span>
                         <i id="faqIcon-2" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div id="faqContent-2" class="hidden px-5 pb-5 text-xs text-gray-600 leading-relaxed border-t border-nalessa-blush/40 pt-3">
-                        Totalmente. Trabajamos directamente con distribuidores oficiales autorizados de marcas como Oriflame Sweden, Coach, Hugo Boss, Calvin Klein, Neutrogena y The Ordinary. Todos los perfumes se entregan en su caja original sellada con código de lote.
+                        La presentación, empaque, código de lote y disponibilidad se confirman por WhatsApp antes de formalizar cada pedido. Si necesitas verificar un producto específico, solicita fotografías actuales y sus datos de presentación.
                     </div>
                 </div>
 
@@ -749,7 +736,7 @@
                         <i id="faqIcon-3" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div id="faqContent-3" class="hidden px-5 pb-5 text-xs text-gray-600 leading-relaxed border-t border-nalessa-blush/40 pt-3">
-                        Los tiempos y costos se confirman por WhatsApp según la ciudad o municipio. Como referencia académica, el carrito calcula L 100.00 de envío y lo muestra gratis en compras superiores a L 2,000.00.
+                        Los tiempos y costos se confirman por WhatsApp según la ciudad o municipio. El carrito calcula L 100.00 de envío y lo muestra gratis en compras superiores a L 2,000.00.
                     </div>
                 </div>
 
@@ -759,7 +746,7 @@
                         <i id="faqIcon-4" class="fa-solid fa-chevron-down text-gray-400 transition-transform"></i>
                     </button>
                     <div id="faqContent-4" class="hidden px-5 pb-5 text-xs text-gray-600 leading-relaxed border-t border-nalessa-blush/40 pt-3">
-                        El sitio genera un comprobante exclusivamente demostrativo para presentar el funcionamiento del proyecto. No constituye una factura fiscal ni confirma un pago bancario.
+                        El resumen generado por el modo de prueba no constituye una factura fiscal. Los comprobantes de pedidos reales se coordinan directamente con NALESSA.
                     </div>
                 </div>
             </div>
@@ -793,7 +780,7 @@
                         <span class="text-xl font-serif font-bold tracking-[0.2em] text-white uppercase">NALESSA</span>
                     </div>
                     <p class="text-xs text-gray-400 leading-relaxed font-light">
-                        Boutique de perfumería importada 100% original, skincare clínico y distribuidora de calzado brasileño Vizzano.
+                        Boutique de perfumería, skincare y calzado con catálogo curado, atención personalizada y pedidos en Honduras.
                     </p>
                 </div>
 
@@ -817,8 +804,8 @@
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-bold text-nalessa-gold uppercase tracking-widest mb-4">Proyecto Académico</h4>
-                    <p class="text-xs text-gray-400 mb-3">Carrito demostrativo y contacto comercial externo mediante WhatsApp.</p>
+                    <h4 class="text-xs font-bold text-nalessa-gold uppercase tracking-widest mb-4">Canales de Compra</h4>
+                    <p class="text-xs text-gray-400 mb-3">Carrito digital, atención personalizada y confirmación mediante WhatsApp.</p>
                     <div class="flex gap-2 text-2xl text-gray-400">
                         <i class="fa-brands fa-cc-visa hover:text-white transition-colors"></i>
                         <i class="fa-brands fa-cc-mastercard hover:text-white transition-colors"></i>
@@ -883,7 +870,7 @@
 
                     <div class="space-y-2 pt-2">
                         <button onclick="openCheckoutModal()" class="w-full bg-nalessa-dark hover:bg-nalessa-plum text-nalessa-gold font-bold py-3.5 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 uppercase text-xs tracking-wider border border-nalessa-gold/30">
-                            <i class="fa-solid fa-receipt text-base"></i> Finalizar compra demostrativa
+                            <i class="fa-solid fa-credit-card text-base"></i> Pago con tarjeta
                         </button>
 
                         <button onclick="checkoutWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 uppercase text-[11px] tracking-wider">
@@ -911,7 +898,7 @@
     </div>
 
     <!-- ONLINE PAYMENT GATEWAY CHECKOUT MODAL -->
-    <div id="checkoutModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4" style="display:none !important" aria-hidden="true">
+    <div id="checkoutModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
         <div class="fixed inset-0 bg-nalessa-dark/80 backdrop-blur-sm" onclick="closeCheckoutModal()"></div>
         <div class="relative bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-nalessa-blush z-10 my-8">
             <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-400 hover:text-nalessa-dark text-xl">
@@ -920,13 +907,13 @@
             
             <div class="text-center mb-6">
                 <div class="inline-flex items-center gap-2 bg-nalessa-soft text-nalessa-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-2 border border-nalessa-blush">
-                    <i class="fa-solid fa-ban text-nalessa-rose"></i> Módulo desactivado en esta versión académica
+                    <i class="fa-solid fa-shield-halved text-nalessa-rose"></i> Simulación segura • Utiliza únicamente datos inventados
                 </div>
-                <h3 class="text-2xl font-bold font-serif text-nalessa-dark">Pago en línea no disponible</h3>
-                <p class="text-xs text-gray-500 mt-1">Este proyecto no solicita ni procesa información financiera.</p>
+                <h3 id="checkoutTitle" class="text-2xl font-bold font-serif text-nalessa-dark">Pago con tarjeta</h3>
+                <p class="text-xs text-gray-500 mt-1">Este formulario valida el flujo visual, pero no procesa cargos ni guarda datos financieros.</p>
             </div>
 
-            <form id="paymentForm" onsubmit="processPayment(event)" class="space-y-4">
+            <form id="paymentForm" onsubmit="processPayment(event)" autocomplete="off" class="space-y-4">
                 
                 <div class="space-y-3 bg-nalessa-soft/50 p-4 rounded-2xl border border-nalessa-blush">
                     <h4 class="text-xs font-bold text-nalessa-dark uppercase tracking-wider flex items-center gap-2 font-serif">
@@ -963,24 +950,27 @@
                         <i class="fa-solid fa-wallet text-nalessa-gold"></i> 2. Selecciona Método de Pago
                     </h4>
                     
-                    <div class="grid grid-cols-3 gap-2">
+                    <div class="grid grid-cols-1 gap-2">
                         <label onclick="selectPaymentMethod('card')" id="payMethodCard" class="bg-white border-2 border-nalessa-gold p-3 rounded-xl cursor-pointer text-center flex flex-col items-center justify-center transition-all">
                             <i class="fa-solid fa-credit-card text-nalessa-dark text-lg mb-1"></i>
-                            <span class="text-[10px] font-bold text-nalessa-dark block">Tarjeta Crédito/Débito</span>
+                            <span class="text-[10px] font-bold text-nalessa-dark block">Tarjeta</span>
                         </label>
 
-                        <label onclick="selectPaymentMethod('bank')" id="payMethodBank" class="bg-white border border-nalessa-blush p-3 rounded-xl cursor-pointer text-center flex flex-col items-center justify-center transition-all opacity-70">
+                        <label onclick="selectPaymentMethod('bank')" id="payMethodBank" class="hidden bg-white border border-nalessa-blush p-3 rounded-xl cursor-pointer text-center flex-col items-center justify-center transition-all opacity-70">
                             <i class="fa-solid fa-building-columns text-nalessa-dark text-lg mb-1"></i>
                             <span class="text-[10px] font-bold text-nalessa-dark block">Transferencia BAC / Banco</span>
                         </label>
 
-                        <label onclick="selectPaymentMethod('cod')" id="payMethodCod" class="bg-white border border-nalessa-blush p-3 rounded-xl cursor-pointer text-center flex flex-col items-center justify-center transition-all opacity-70">
+                        <label onclick="selectPaymentMethod('cod')" id="payMethodCod" class="hidden bg-white border border-nalessa-blush p-3 rounded-xl cursor-pointer text-center flex-col items-center justify-center transition-all opacity-70">
                             <i class="fa-solid fa-hand-holding-dollar text-nalessa-dark text-lg mb-1"></i>
                             <span class="text-[10px] font-bold text-nalessa-dark block">Pago Contra Entrega</span>
                         </label>
                     </div>
 
                     <div id="cardFields" class="space-y-3 pt-2">
+                        <div class="bg-nalessa-soft border border-nalessa-blush text-nalessa-dark rounded-xl p-3 text-[11px] leading-relaxed">
+                            <strong>Validación local:</strong> escribe 16 dígitos inventados, una fecha posterior al mes actual y un CVC de 3 o 4 dígitos. No uses datos reales.
+                        </div>
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold text-gray-500 uppercase">Tarjetas aceptadas:</span>
                             <div class="flex gap-2 text-xl text-gray-600">
@@ -993,7 +983,7 @@
                         <div>
                             <label class="block text-[10px] font-bold text-gray-600 uppercase mb-1">Número de Tarjeta:</label>
                             <div class="relative">
-                                <input type="text" id="cardNumber" required placeholder="4000 1234 5678 9010" maxlength="19" oninput="formatCardNumber(this)" class="w-full bg-white border border-nalessa-blush rounded-xl py-2 pl-3 pr-10 text-xs font-mono focus:outline-none focus:border-nalessa-gold">
+                                <input type="text" id="cardNumber" required inputmode="numeric" autocomplete="off" placeholder="0000 0000 0000 0000" maxlength="19" minlength="19" oninput="formatCardNumber(this)" class="w-full bg-white border border-nalessa-blush rounded-xl py-2 pl-3 pr-10 text-xs font-mono focus:outline-none focus:border-nalessa-gold">
                                 <i class="fa-solid fa-credit-card absolute right-3 top-2.5 text-gray-400 text-xs"></i>
                             </div>
                         </div>
@@ -1001,11 +991,11 @@
                         <div class="grid grid-cols-2 gap-3">
                             <div>
                                 <label class="block text-[10px] font-bold text-gray-600 uppercase mb-1">Vencimiento (MM/AA):</label>
-                                <input type="text" id="cardExpiry" required placeholder="12/28" maxlength="5" class="w-full bg-white border border-nalessa-blush rounded-xl py-2 px-3 text-xs font-mono focus:outline-none focus:border-nalessa-gold">
+                                <input type="text" id="cardExpiry" required inputmode="numeric" autocomplete="off" placeholder="MM/AA" maxlength="5" minlength="5" oninput="formatCardExpiry(this)" class="w-full bg-white border border-nalessa-blush rounded-xl py-2 px-3 text-xs font-mono focus:outline-none focus:border-nalessa-gold">
                             </div>
                             <div>
                                 <label class="block text-[10px] font-bold text-gray-600 uppercase mb-1">Código CVV / CVC:</label>
-                                <input type="password" id="cardCvc" required placeholder="123" maxlength="4" class="w-full bg-white border border-nalessa-blush rounded-xl py-2 px-3 text-xs font-mono focus:outline-none focus:border-nalessa-gold">
+                                <input type="password" id="cardCvc" required inputmode="numeric" autocomplete="off" placeholder="000" maxlength="4" minlength="3" pattern="[0-9]{3,4}" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)" class="w-full bg-white border border-nalessa-blush rounded-xl py-2 px-3 text-xs font-mono focus:outline-none focus:border-nalessa-gold">
                             </div>
                         </div>
 
@@ -1020,7 +1010,7 @@
                             <i class="fa-solid fa-building-columns text-nalessa-gold"></i> Cuentas Autorizadas para Transferencia:
                         </p>
                         <div class="text-[11px] space-y-1 text-gray-600 font-mono">
-                            <p>• No se publican cuentas bancarias en este proyecto académico.</p>
+                            <p>• La transferencia no está habilitada en el entorno de prueba.</p>
                         </div>
                         <div class="pt-2">
                             <label class="block text-[10px] font-bold text-gray-600 uppercase mb-1">Número de Depósito o Comprobante:</label>
@@ -1045,14 +1035,14 @@
                 </div>
 
                 <button type="submit" id="paySubmitBtn" class="w-full bg-nalessa-gold hover:bg-nalessa-goldHover text-nalessa-dark font-bold py-3.5 rounded-xl shadow-xl transition-all uppercase text-xs tracking-widest flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-lock text-sm"></i> Confirmar & Pagar Ahora
+                    <i class="fa-solid fa-lock text-sm"></i> Validar pago simulado
                 </button>
             </form>
 
             <div id="paymentLoadingOverlay" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md rounded-3xl flex flex-col items-center justify-center text-center p-6 z-20">
                 <div class="w-16 h-16 border-4 border-nalessa-blush border-t-nalessa-gold rounded-full animate-spin mb-4"></div>
-                <h4 class="text-lg font-serif font-bold text-nalessa-dark">Procesando Pago Seguro...</h4>
-                <p class="text-xs text-gray-500 max-w-xs mt-1">Función desactivada. Utiliza el comprobante demostrativo o el pedido por WhatsApp.</p>
+                <h4 class="text-lg font-serif font-bold text-nalessa-dark">Validando información...</h4>
+                <p class="text-xs text-gray-500 max-w-xs mt-1">Comprobando el formato localmente. No se realizará ningún cargo.</p>
             </div>
         </div>
     </div>
@@ -1071,12 +1061,12 @@
                         <div class="flex items-center gap-1 text-nalessa-gold font-serif text-2xl font-bold">
                             <span>N</span><span class="text-nalessa-dark text-xl font-sans tracking-widest ml-1 uppercase">NALESSA</span>
                         </div>
-                        <p class="text-[10px] text-gray-500">Boutique & Perfumería Original</p>
-                        <p class="text-[10px] text-gray-500">Proyecto académico universitario</p>
+                        <p class="text-[10px] text-gray-500">Boutique de belleza y estilo</p>
+                        <p class="text-[10px] text-gray-500">Resumen de simulación de compra</p>
                     </div>
                     <div class="text-right">
                         <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider inline-block mb-1">
-                            <i class="fa-solid fa-circle-check mr-1"></i> Pedido Demostrativo
+                            <i class="fa-solid fa-circle-check mr-1"></i> Simulación completada
                         </span>
                         <h4 id="recOrderNum" class="text-xs font-mono font-bold text-nalessa-dark">#NAL-2026-8492</h4>
                         <p id="recDate" class="text-[10px] text-gray-400">02/08/2026 21:30</p>
@@ -1123,14 +1113,14 @@
                 </div>
 
                 <div class="bg-nalessa-soft p-3 rounded-xl text-center text-[10px] text-gray-500 border border-nalessa-blush">
-                    <p><i class="fa-solid fa-graduation-cap text-nalessa-gold mr-1"></i> Código de demostración: <strong id="recAuthCode" class="font-mono text-nalessa-dark">DEMO-99201847</strong></p>
-                    <p class="mt-0.5">Este comprobante ilustra el funcionamiento del proyecto y no acredita un pago real.</p>
+                    <p><i class="fa-solid fa-shield-halved text-nalessa-gold mr-1"></i> Referencia simulada: <strong id="recAuthCode" class="font-mono text-nalessa-dark">SIM-99201847</strong></p>
+                    <p class="mt-0.5">Este resumen no acredita un pago ni sustituye una factura fiscal.</p>
                 </div>
             </div>
 
             <div class="mt-6 flex gap-3 print:hidden">
                 <button onclick="window.print()" class="flex-1 bg-nalessa-dark hover:bg-nalessa-plum text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-print"></i> Imprimir Factura Digital
+                    <i class="fa-solid fa-print"></i> Imprimir resumen
                 </button>
                 <button onclick="closeReceiptModal()" class="flex-1 bg-nalessa-soft border border-nalessa-blush text-nalessa-dark hover:bg-nalessa-blush font-bold py-3 rounded-xl text-xs uppercase tracking-wider transition-all">
                     Finalizar & Volver
@@ -1149,10 +1139,12 @@
         <span id="toastMessage">Producto añadido al carrito</span>
     </div>
 
+    <script src="productos.js"></script>
+
     <!-- SCRIPT LOGIC -->
     <script>
         // EXPANDED PRODUCT DATABASE (CUADROS)
-        const products = [
+        const products = window.NALESSA_PRODUCTS || [
             {
                 id: 1,
                 name: "Coach Blue Eau de Toilette",
@@ -1163,7 +1155,7 @@
                 rating: 5,
                 image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600",
                 description: "Fragancia aromática fresca con notas de lima, pimienta negra, ozono y madera de cedro puro.",
-                details: "Frasco icónico de 100ml spray. Fijación duradera de 8-12 horas. Garantía de caja sellada."
+                details: "Presentación de 100 ml en spray. Empaque y disponibilidad sujetos a confirmación."
             },
             {
                 id: 2,
@@ -1282,8 +1274,8 @@
                 badge: "Lote Perfumes",
                 rating: 5,
                 image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600",
-                description: "Caja sellada con 6 fragancias de diseñador 100% originales para revender.",
-                details: "Incluye fragancias Coach, Hugo Boss y Guess. Factura comercial para tu negocio."
+                description: "Selección de seis fragancias para iniciar o ampliar un emprendimiento.",
+                details: "Las marcas, presentaciones y documentación disponible se confirman antes de formalizar el pedido."
             },
             {
                 id: 12,
@@ -1340,9 +1332,16 @@
         let currentCategory = 'all';
         let currentPaymentMethod = 'card';
         let activeSelectedRoutine = null;
+        let lastTrackedSearch = '';
 
         function saveCart() {
             localStorage.setItem('nalessaDemoCart', JSON.stringify(cart));
+        }
+
+        function trackMetric(metric) {
+            const metrics = JSON.parse(localStorage.getItem('nalessaMetrics') || '{}');
+            metrics[metric] = (metrics[metric] || 0) + 1;
+            localStorage.setItem('nalessaMetrics', JSON.stringify(metrics));
         }
 
         // INITIALIZATION
@@ -1355,6 +1354,7 @@
             renderProducts();
             calculateProfit();
             updateCartUI();
+            trackMetric('pageViews');
         });
 
         document.addEventListener('keydown', (event) => {
@@ -1447,7 +1447,7 @@
                         <div class="p-5 pt-0">
                             <div class="pt-3 border-t border-nalessa-blush/60 flex items-center justify-between">
                                 <div>
-                                    <span class="text-[9px] text-gray-400 uppercase block font-semibold">Precio Oficial</span>
+                                    <span class="text-[9px] text-gray-400 uppercase block font-semibold">Precio</span>
                                     <span class="text-xl font-bold text-nalessa-plum font-serif">L ${p.price.toLocaleString('es-HN')}</span>
                                 </div>
 
@@ -1528,6 +1528,11 @@
             if (catalogInput && catalogInput.value !== val) catalogInput.value = val;
             if (searchInput && searchInput.value !== val) searchInput.value = val;
             if (mobileInput && mobileInput.value !== val) mobileInput.value = val;
+            const normalized = val.trim().toLowerCase();
+            if (normalized.length >= 3 && normalized !== lastTrackedSearch) {
+                trackMetric('searches');
+                lastTrackedSearch = normalized;
+            }
             renderProducts();
         }
 
@@ -1604,6 +1609,7 @@
             }
 
             updateCartUI();
+            trackMetric('cartAdds');
             showToast(`${product.name} agregado al carrito`);
         }
 
@@ -1692,21 +1698,21 @@
             totalEl.innerText = `L ${finalTotal.toLocaleString('es-HN', {minimumFractionDigits: 2})}`;
         }
 
-        // DEMONSTRATION CHECKOUT (DOES NOT PROCESS OR REQUEST PAYMENT DATA)
+        // TEST CHECKOUT (DOES NOT PROCESS OR STORE REAL PAYMENT DATA)
         function openCheckoutModal() {
             if(cart.length === 0) {
                 showToast("Tu carrito está vacío. Agrega productos.");
                 return;
             }
             toggleCart();
-            showReceipt({
-                name: "Cliente de demostración",
-                email: "Proyecto académico",
-                address: "Dirección no solicitada",
-                city: "Honduras"
-            });
-            cart = [];
-            updateCartUI();
+
+            const rawSubtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const isvTax = rawSubtotal * 0.15;
+            const shippingFee = rawSubtotal >= 2000 ? 0 : 100;
+            const finalTotal = rawSubtotal + isvTax + shippingFee;
+
+            document.getElementById('payModalTotal').innerText = `L ${finalTotal.toLocaleString('es-HN', {minimumFractionDigits: 2})}`;
+            document.getElementById('checkoutModal').classList.remove('hidden');
         }
 
         function closeCheckoutModal() {
@@ -1759,9 +1765,75 @@
             input.value = parts.length ? parts.join(' ') : v;
         }
 
+        function formatCardExpiry(input) {
+            const digits = input.value.replace(/\D/g, '').slice(0, 4);
+            input.value = digits.length > 2
+                ? `${digits.slice(0, 2)}/${digits.slice(2)}`
+                : digits;
+        }
+
+        function isFutureExpiry(value) {
+            const match = value.match(/^(0[1-9]|1[0-2])\/(\d{2})$/);
+            if (!match) return false;
+
+            const expiryMonth = Number(match[1]);
+            const expiryYear = 2000 + Number(match[2]);
+            const now = new Date();
+            const currentMonth = now.getMonth() + 1;
+            const currentYear = now.getFullYear();
+
+            return expiryYear > currentYear ||
+                (expiryYear === currentYear && expiryMonth > currentMonth);
+        }
+
         function processPayment(e) {
             e.preventDefault();
-            showToast("El pago en línea está desactivado en este proyecto académico.");
+
+            const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
+            const expiry = document.getElementById('cardExpiry').value.trim();
+            const cvc = document.getElementById('cardCvc').value.trim();
+            const cardHolder = document.getElementById('cardHolder').value.trim();
+
+            if (!/^\d{16}$/.test(cardNumber)) {
+                showToast("El número debe contener exactamente 16 dígitos.");
+                return false;
+            }
+
+            if (!isFutureExpiry(expiry)) {
+                showToast("Ingresa una fecha MM/AA posterior al mes actual.");
+                return false;
+            }
+
+            if (!/^\d{3,4}$/.test(cvc)) {
+                showToast("El CVC debe contener 3 o 4 dígitos.");
+                return false;
+            }
+
+            if (cardHolder.length < 3) {
+                showToast("Escribe un nombre completo para el titular.");
+                return false;
+            }
+
+            const client = {
+                name: document.getElementById('payClientName').value,
+                email: document.getElementById('payClientEmail').value,
+                address: document.getElementById('payClientAddress').value,
+                city: document.getElementById('payClientCity').value
+            };
+
+            const overlay = document.getElementById('paymentLoadingOverlay');
+            overlay.classList.remove('hidden');
+
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                closeCheckoutModal();
+                showReceipt(client);
+                trackMetric('testPayments');
+                cart = [];
+                updateCartUI();
+                e.target.reset();
+            }, 1400);
+
             return false;
         }
 
@@ -1772,10 +1844,10 @@
             const finalTotal = rawSubtotal + isvTax + shippingFee;
 
             const randomOrderNum = Math.floor(1000 + Math.random() * 9000);
-            const randomAuthCode = "DEMO-" + Math.floor(10000000 + Math.random() * 90000000);
+            const randomAuthCode = "SIM-" + Math.floor(10000000 + Math.random() * 90000000);
             const todayDate = new Date().toLocaleString('es-HN');
 
-            document.getElementById('recOrderNum').innerText = `#NAL-2026-${randomOrderNum}`;
+            document.getElementById('recOrderNum').innerText = `#NAL-${new Date().getFullYear()}-${randomOrderNum}`;
             document.getElementById('recAuthCode').innerText = randomAuthCode;
             document.getElementById('recDate').innerText = todayDate;
 
@@ -1827,6 +1899,7 @@
             text += `\nEnvío: ${shippingFee === 0 ? 'Gratis' : 'L ' + shippingFee}`;
             text += `\nTotal: L ${finalTotal.toLocaleString('es-HN')}\n\nQuedo a la espera para coordinar la entrega.`;
 
+            trackMetric('whatsappOrders');
             window.open(`https://wa.me/50488589904?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
         }
 
@@ -1884,6 +1957,7 @@
 
         function handleNewsletter(e) {
             e.preventDefault();
+            trackMetric('subscriptions');
             showToast("¡Gracias por suscribirte al Club VIP Nalessa!");
             e.target.reset();
         }

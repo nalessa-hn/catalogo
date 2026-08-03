@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>NALESSA | Panel de Estrategia y Resultados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink:#2e2923; --plum:#746858; --gold:#a59682; --rose:#b8ab99; --paper:#f7f3ec; --line:#e8e1d7; --green:#35725a; }
+        * { box-sizing:border-box; }
+        body { margin:0; background:var(--paper); color:var(--ink); font-family:"Plus Jakarta Sans",sans-serif; }
+        h1,h2,h3 { font-family:"Cormorant Garamond",serif; margin:0; }
+        header { background:linear-gradient(130deg,var(--ink),var(--plum)); color:white; padding:32px 5vw; }
+        nav { display:flex; align-items:center; justify-content:space-between; gap:20px; max-width:1200px; margin:auto; }
+        .brand { font:700 26px "Cormorant Garamond",serif; letter-spacing:.22em; }
+        .back { color:var(--ink); background:var(--gold); padding:10px 18px; border-radius:999px; text-decoration:none; font-size:12px; font-weight:700; }
+        .hero { max-width:1200px; margin:42px auto 0; display:grid; grid-template-columns:1.3fr .7fr; gap:30px; align-items:end; }
+        .hero h1 { font-size:clamp(40px,6vw,68px); line-height:.95; font-weight:500; }
+        .hero p { color:#eee9e1; line-height:1.7; font-size:14px; }
+        main { max-width:1200px; margin:auto; padding:42px 24px 80px; }
+        section { margin-bottom:48px; }
+        .eyebrow { color:#746858; font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; margin-bottom:6px; }
+        .section-title { font-size:34px; margin-bottom:18px; }
+        .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+        .card { background:white; border:1px solid var(--line); border-radius:20px; padding:22px; box-shadow:0 12px 30px rgba(30,14,21,.04); }
+        .metric strong { display:block; font:700 30px "Cormorant Garamond",serif; color:var(--plum); }
+        .metric span { font-size:11px; color:#74666b; text-transform:uppercase; letter-spacing:.08em; }
+        .two { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+        .card h3 { font-size:24px; margin-bottom:10px; }
+        .card p,.card li { font-size:13px; line-height:1.65; color:#5f5257; }
+        .tag { display:inline-block; background:#e8e1d7; color:var(--plum); padding:7px 10px; border-radius:999px; font-size:11px; font-weight:700; margin:4px 4px 0 0; }
+        table { width:100%; border-collapse:collapse; background:white; border:1px solid var(--line); border-radius:20px; overflow:hidden; font-size:12px; }
+        th { background:var(--plum); color:white; text-align:left; padding:14px; }
+        td { padding:14px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.55; }
+        tr:last-child td { border-bottom:0; }
+        .calculator { background:var(--plum); color:white; border-radius:24px; padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+        .fields { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        label { font-size:11px; color:#dacbd0; }
+        input { width:100%; margin-top:5px; padding:11px; border:1px solid #9a8d7c; border-radius:10px; background:#3a342d; color:white; }
+        .results { display:grid; grid-template-columns:1fr 1fr; gap:12px; align-content:start; }
+        .result { background:rgba(255,255,255,.08); border:1px solid rgba(203,176,135,.25); border-radius:16px; padding:16px; }
+        .result strong { display:block; color:var(--gold); font:700 25px "Cormorant Garamond",serif; }
+        .result span { font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:#dfd3d7; }
+        .note { font-size:11px; color:#807378; line-height:1.6; margin-top:12px; }
+        .status { color:var(--green); font-weight:700; }
+        footer { text-align:center; padding:28px; background:var(--ink); color:#bdaeb4; font-size:11px; }
+        @media(max-width:800px){ .hero,.two,.calculator{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.fields{grid-template-columns:1fr} }
+        @media(max-width:520px){ .grid,.results{grid-template-columns:1fr}.brand{font-size:20px} }
+        @media print { .back{display:none} body{background:white} .card{box-shadow:none} }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><div class="brand">NALESSA</div><a class="back" href="index.html">Volver a la tienda</a></nav>
+        <div class="hero">
+            <h1>Estrategia digital,<br><em style="color:var(--gold)">métricas y crecimiento</em></h1>
+            <p>Plan integral para convertir el catálogo digital en un canal de captación, atención y venta, con objetivos medibles y una experiencia coherente con el posicionamiento de NALESSA.</p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="eyebrow">Analítica integrada</div>
+            <h2 class="section-title">Actividad registrada en este navegador</h2>
+            <div class="grid">
+                <div class="card metric"><strong id="mViews">0</strong><span>Visitas</span></div>
+                <div class="card metric"><strong id="mCart">0</strong><span>Productos agregados</span></div>
+                <div class="card metric"><strong id="mWhatsApp">0</strong><span>Pedidos a WhatsApp</span></div>
+                <div class="card metric"><strong id="mSubs">0</strong><span>Suscripciones</span></div>
+            </div>
+            <p class="note">Estas métricas locales permiten revisar el flujo de medición sin recopilar información personal. Para operación comercial se recomienda una plataforma analítica con aviso de privacidad.</p>
+        </section>
+
+        <section>
+            <div class="eyebrow">Análisis de mercado</div>
+            <h2 class="section-title">Cliente, necesidad y propuesta de valor</h2>
+            <div class="two">
+                <article class="card">
+                    <h3>Segmento prioritario</h3>
+                    <p>Mujeres y hombres de 20 a 45 años en Honduras que buscan productos de cuidado personal, fragancias y calzado con atención rápida, información clara y compra asistida por WhatsApp.</p>
+                    <span class="tag">Compra móvil</span><span class="tag">Honduras</span><span class="tag">20–45 años</span><span class="tag">Belleza y estilo</span>
+                </article>
+                <article class="card">
+                    <h3>Diferenciación</h3>
+                    <p>NALESSA reúne tres categorías complementarias en un solo catálogo, añade orientación de skincare, guía de tallas y atención directa. Esto reduce dudas y facilita la decisión de compra.</p>
+                    <span class="tag">Asesoría</span><span class="tag">Catálogo unificado</span><span class="tag">Mayoristas</span><span class="tag">Respuesta directa</span>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="eyebrow">Estrategia digital y marketing</div>
+            <h2 class="section-title">Canales, acciones y medición</h2>
+            <table>
+                <thead><tr><th>Canal</th><th>Objetivo</th><th>Acciones</th><th>KPI principal</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>SEO</strong></td><td>Aumentar descubrimiento orgánico.</td><td>Títulos descriptivos, meta descripción, categorías, texto alternativo y contenido sobre perfumes, piel y tallas.</td><td>Visitas orgánicas y búsquedas.</td></tr>
+                    <tr><td><strong>Instagram y Facebook</strong></td><td>Generar alcance y confianza.</td><td>3 publicaciones semanales, historias de novedades, demostraciones, testimonios verificados y llamados al catálogo.</td><td>Alcance, interacción y clics.</td></tr>
+                    <tr><td><strong>WhatsApp</strong></td><td>Convertir interés en pedidos.</td><td>Mensaje automático con productos, cantidades y total; seguimiento de disponibilidad y entrega.</td><td>Conversaciones y pedidos confirmados.</td></tr>
+                    <tr><td><strong>Email / Club VIP</strong></td><td>Fidelizar clientes.</td><td>Boletín quincenal con novedades, reposiciones, consejos y promociones segmentadas.</td><td>Suscripciones, aperturas y clics.</td></tr>
+                    <tr><td><strong>Publicidad</strong></td><td>Acelerar adquisición.</td><td>Campañas geográficas de bajo presupuesto, retargeting a visitantes y anuncios de productos destacados.</td><td>Costo por conversación y ROAS.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <div class="eyebrow">Integración de herramientas</div>
+            <h2 class="section-title">Ecosistema digital conectado</h2>
+            <div class="grid">
+                <article class="card"><h3>Carrito</h3><p>Conserva productos y cantidades en el dispositivo para evitar perder el pedido al recargar.</p><p class="status">✓ Operativo</p></article>
+                <article class="card"><h3>WhatsApp</h3><p>Construye automáticamente el mensaje con detalle, impuesto, envío y total.</p><p class="status">✓ Operativo</p></article>
+                <article class="card"><h3>Pago simulado</h3><p>Valida 16 dígitos, CVC y vencimiento futuro con datos inventados, sin almacenar información ni realizar cargos.</p><p class="status">✓ Operativo</p></article>
+                <article class="card"><h3>Analítica local</h3><p>Registra visitas, búsquedas, carritos, suscripciones y acciones clave en el dispositivo.</p><p class="status">✓ Operativo</p></article>
+            </div>
+        </section>
+
+        <section>
+            <div class="eyebrow">Resultados esperados</div>
+            <h2 class="section-title">Calculadora de proyección mensual</h2>
+            <div class="calculator">
+                <div>
+                    <div class="fields">
+                        <label>Visitas mensuales<input id="visits" type="number" min="0" value="1200"></label>
+                        <label>Conversión (%)<input id="conversion" type="number" min="0" max="100" step="0.1" value="3.5"></label>
+                        <label>Ticket promedio (L)<input id="ticket" type="number" min="0" value="1250"></label>
+                        <label>Margen bruto (%)<input id="margin" type="number" min="0" max="100" step="0.1" value="38"></label>
+                    </div>
+                    <p style="font-size:11px;color:#cdbec3;line-height:1.6">Escenario base conservador para el inicio del canal. Ajusta las variables durante la exposición para comparar escenarios.</p>
+                </div>
+                <div class="results">
+                    <div class="result"><strong id="orders">42</strong><span>Pedidos estimados</span></div>
+                    <div class="result"><strong id="revenue">L 52,500</strong><span>Ventas estimadas</span></div>
+                    <div class="result"><strong id="profit">L 19,950</strong><span>Ganancia bruta</span></div>
+                    <div class="result"><strong id="goal">3.5%</strong><span>Conversión objetivo</span></div>
+                </div>
+            </div>
+            <p class="note">Las proyecciones son estimaciones basadas en las variables visibles; deben compararse mensualmente con visitas, conversaciones, pedidos confirmados, ticket promedio y margen real.</p>
+        </section>
+
+        <section>
+            <div class="eyebrow">Plan de contenido</div>
+            <h2 class="section-title">Ciclo mensual de comunicación</h2>
+            <table>
+                <thead><tr><th>Semana</th><th>Contenido principal</th><th>Formato</th><th>Conversión esperada</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Guía para elegir una fragancia según ocasión y familia olfativa.</td><td>Carrusel + historia</td><td>Visitas al catálogo de perfumes.</td></tr>
+                    <tr><td>2</td><td>Guía de tallas y combinaciones con calzado Vizzano.</td><td>Video corto + encuesta</td><td>Consultas de talla por WhatsApp.</td></tr>
+                    <tr><td>3</td><td>Rutina básica de skincare por tipo de piel.</td><td>Infografía + artículo</td><td>Uso del diagnóstico y venta por rutina.</td></tr>
+                    <tr><td>4</td><td>Opciones mayoristas y caso de crecimiento de una emprendedora.</td><td>Testimonio + llamada</td><td>Solicitudes del catálogo mayorista.</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>NALESSA • Panel interno de estrategia digital y resultados</footer>
+    <script>
+        const metrics = JSON.parse(localStorage.getItem('nalessaMetrics') || '{}');
+        document.getElementById('mViews').textContent = metrics.pageViews || 0;
+        document.getElementById('mCart').textContent = metrics.cartAdds || 0;
+        document.getElementById('mWhatsApp').textContent = metrics.whatsappOrders || 0;
+        document.getElementById('mSubs').textContent = metrics.subscriptions || 0;
+
+        function project() {
+            const visits = Number(document.getElementById('visits').value) || 0;
+            const conversion = Number(document.getElementById('conversion').value) || 0;
+            const ticket = Number(document.getElementById('ticket').value) || 0;
+            const margin = Number(document.getElementById('margin').value) || 0;
+            const orders = Math.round(visits * conversion / 100);
+            const revenue = orders * ticket;
+            const profit = revenue * margin / 100;
+            document.getElementById('orders').textContent = orders.toLocaleString('es-HN');
+            document.getElementById('revenue').textContent = 'L ' + revenue.toLocaleString('es-HN', {maximumFractionDigits:0});
+            document.getElementById('profit').textContent = 'L ' + profit.toLocaleString('es-HN', {maximumFractionDigits:0});
+            document.getElementById('goal').textContent = conversion.toLocaleString('es-HN') + '%';
+        }
+        document.querySelectorAll('input').forEach(input => input.addEventListener('input', project));
+        project();
+    </script>
+</body>
+</html>
