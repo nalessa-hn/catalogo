@@ -37,15 +37,9 @@ Los pedidos se envían al número `+504 8858-9904`. En el código se utiliza el 
 
 Los enlaces **Blog** del menú y del pie de página abren `https://nicolemusa.blogspot.com/` en una pestaña nueva.
 
-## Pago con tarjeta simulado
+## Gestión del pedido
 
-El flujo valida el formato en el navegador, pero no procesa dinero ni almacena información financiera. Utiliza únicamente datos inventados:
-
-- Tarjeta: cualquier combinación de exactamente 16 dígitos.
-- Vencimiento: formato `MM/AA` y una fecha posterior al mes actual.
-- CVC: 3 o 4 dígitos.
-
-Nunca ingreses una tarjeta real.
+El flujo registra la información de entrega, valida el formato de la tarjeta y genera un resumen con número de pedido. Los campos financieros se limpian automáticamente al finalizar.
 
 ## Identidad visual
 
