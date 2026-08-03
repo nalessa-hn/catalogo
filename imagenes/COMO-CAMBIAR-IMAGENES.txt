@@ -1,1 +1,13 @@
+CÓMO CAMBIAR LAS IMÁGENES DEL CATÁLOGO
 
+1. Sube tus fotografías a esta carpeta.
+2. Usa nombres cortos, sin espacios ni tildes. Ejemplo: coach-blue.jpg
+3. Abre productos.js.
+4. Busca el producto y cambia su propiedad image.
+
+Ejemplo:
+image: "imagenes/coach-blue.jpg",
+
+Formatos recomendados: JPG o WEBP.
+Tamaño recomendado: 900 x 900 píxeles.
+Peso recomendado: menos de 300 KB por fotografía.
