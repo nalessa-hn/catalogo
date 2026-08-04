@@ -15,7 +15,7 @@ window.NALESSA_PRODUCTS = [
         price: 1550,
         badge: "Más Vendido",
         rating: 5,
-        image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/coach-blue.jpg",
         description: "Fragancia aromática fresca con notas de lima, pimienta negra, ozono y madera de cedro.",
         details: "Presentación de 100 ml en spray. Caja sellada y disponibilidad sujeta a confirmación."
     },
