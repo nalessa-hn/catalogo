@@ -39,7 +39,7 @@ window.NALESSA_PRODUCTS = [
         price: 1250,
         badge: "Calzado Brasil",
         rating: 5,
-        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/stil-confort.jpg",
         description: "Tacón fino clásico en tono borgoña con plantilla acolchada de Vizzano.",
         details: "Tallas 35 a 38 BR. Material sintético de alta durabilidad con acabado mate."
     },
@@ -51,7 +51,7 @@ window.NALESSA_PRODUCTS = [
         price: 1100,
         badge: "Confort Diario",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/sanda-negro.jpg",
         description: "Diseño elegante de tiras finas con hebillas metálicas y tacón de bloque.",
         details: "Tacón de 5 cm y suela antideslizante. Consulta las tallas disponibles."
     },
@@ -63,7 +63,7 @@ window.NALESSA_PRODUCTS = [
         price: 650,
         badge: "Hidratación",
         rating: 5,
-        image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/hydro-boost.jpg",
         description: "Gel hidratante facial enriquecido con ácido hialurónico, ligero y de rápida absorción.",
         details: "Frasco de 50 g. Recomendado para complementar la rutina de hidratación."
     },
@@ -75,7 +75,7 @@ window.NALESSA_PRODUCTS = [
         price: 480,
         badge: "Sérum Facial",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1608248597379-e07443233855?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/the-ordy.jpg",
         description: "Sérum de niacinamida y zinc para complementar rutinas de piel con tendencia grasa.",
         details: "Gotero de 30 ml. Realiza una prueba de parche antes de incorporarlo a tu rutina."
     },
@@ -87,7 +87,7 @@ window.NALESSA_PRODUCTS = [
         price: 1100,
         badge: "Aroma Unisex",
         rating: 4.7,
-        image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/ck-be.jpg",
         description: "Fragancia cálida y fresca con lavanda, menta verde, sándalo y durazno suave.",
         details: "Presentación de 100 ml en frasco negro mate."
     },
@@ -99,7 +99,7 @@ window.NALESSA_PRODUCTS = [
         price: 1350,
         badge: "Nueva Tendencia",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/plata-journe.jpg",
         description: "Plataformas tipo cuña en azul celeste pastel con correas acolchadas.",
         details: "Suela de yute tejido y plataforma de 7 cm. Consulta disponibilidad de tallas."
     },
