@@ -111,7 +111,7 @@ window.NALESSA_PRODUCTS = [
         price: 7800,
         badge: "Emprendedores",
         rating: 5,
-        image: "https://scontent.fsap15-1.fna.fbcdn.net/v/t1.6435-9/101459858_1512618392229360_5271037268721664000_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGK0ycyp-pGUVkS8aAwEcBwtY78LG7jNuS1jvwsbuM25A6_Se3UfMh-_S59eLqlrwpNcaIa-T_9k9cxriHY__1P&_nc_ohc=2ob7kyHjrNYQ7kNvwHdvhw6&_nc_oc=AdpZ9UCA4SJ-IlNLGg-ahXKX4UcpMlE003_vEQ84uRAptIAxDYnbkKwQGurJu59tzps&_nc_zt=23&_nc_ht=scontent.fsap15-1.fna&_nc_gid=zXfQgrfsAv60nDh3nytDbg&_nc_ss=7b2a8&oh=00_AQHzJgeKBolQTYsa_TmQw4TSMDsAXGAA0VuSyRI5xlgYAg&oe=6A994E76?auto=format&fit=crop&q=80&w=600",
+        image: "https://scarpycalzados.com/cdn/shop/files/513a82f5-3a11-44ef-b1a3-44c7dab4f806.png?v=1765718699?auto=format&fit=crop&q=80&w=600",
         description: "Lote surtido de 12 pares con una selección de modelos y tallas.",
         details: "La composición del lote se confirma por WhatsApp según inventario disponible."
     },
