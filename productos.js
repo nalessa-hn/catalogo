@@ -111,7 +111,7 @@ window.NALESSA_PRODUCTS = [
         price: 7800,
         badge: "Emprendedores",
         rating: 5,
-        image: "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&q=80&w=600",
+        image: "https://scontent.fsap15-1.fna.fbcdn.net/v/t1.6435-9/101459858_1512618392229360_5271037268721664000_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGK0ycyp-pGUVkS8aAwEcBwtY78LG7jNuS1jvwsbuM25A6_Se3UfMh-_S59eLqlrwpNcaIa-T_9k9cxriHY__1P&_nc_ohc=2ob7kyHjrNYQ7kNvwHdvhw6&_nc_oc=AdpZ9UCA4SJ-IlNLGg-ahXKX4UcpMlE003_vEQ84uRAptIAxDYnbkKwQGurJu59tzps&_nc_zt=23&_nc_ht=scontent.fsap15-1.fna&_nc_gid=zXfQgrfsAv60nDh3nytDbg&_nc_ss=7b2a8&oh=00_AQHzJgeKBolQTYsa_TmQw4TSMDsAXGAA0VuSyRI5xlgYAg&oe=6A994E76?auto=format&fit=crop&q=80&w=600",
         description: "Lote surtido de 12 pares con una selección de modelos y tallas.",
         details: "La composición del lote se confirma por WhatsApp según inventario disponible."
     },
@@ -123,7 +123,7 @@ window.NALESSA_PRODUCTS = [
         price: 890,
         badge: "Cuidado Facial",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600",
+        image: "https://m.media-amazon.com/images/I/41h3HOXWqKL.jpg?auto=format&fit=crop&q=80&w=600",
         description: "Sérum facial concentrado para complementar rutinas de nutrición y cuidado diario.",
         details: "Frasco de 30 ml con dosificador. Sigue las indicaciones del fabricante."
     },
@@ -135,7 +135,7 @@ window.NALESSA_PRODUCTS = [
         price: 6900,
         badge: "Lote Perfumes",
         rating: 5,
-        image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600",
+        image: "https://m.media-amazon.com/images/I/91Jt55hmD6L._AC_SL1500_.jpg?auto=format&fit=crop&q=80&w=600",
         description: "Selección de seis fragancias para iniciar o ampliar un emprendimiento.",
         details: "Las marcas y presentaciones se confirman antes de formalizar el pedido."
     },
@@ -147,7 +147,7 @@ window.NALESSA_PRODUCTS = [
         price: 1280,
         badge: "Floral Frutal",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&q=80&w=600",
+        image: "https://super-del-corral.myshopify.com/cdn/shop/products/image_1a8775b6-1974-4ad1-ab92-8a9dd2088e8d_1125x.jpg?v=1587751076?auto=format&fit=crop&q=80&w=600",
         description: "Fragancia femenina con notas de manzana verde, peonía, fresia y acordes frutales.",
         details: "Presentación de 75 ml Eau de Parfum."
     }
