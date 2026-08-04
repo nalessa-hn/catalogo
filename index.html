@@ -24,7 +24,10 @@
       "areaServed": { "@type": "Country", "name": "Honduras" },
       "currenciesAccepted": "HNL",
       "paymentAccepted": "Coordinación por WhatsApp",
-      "sameAs": ["https://nicolemusa.blogspot.com/"]
+      "sameAs": [
+        "https://www.instagram.com/nalessa.collection/",
+        "https://nicolemusa.blogspot.com/"
+      ]
     }
     </script>
     
@@ -160,6 +163,10 @@
 </head>
 <body class="antialiased selection:bg-nalessa-rose selection:text-white">
 
+    <a href="#catalogo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:bg-white focus:text-nalessa-dark focus:px-4 focus:py-2 focus:rounded-full focus:shadow-xl">
+        Saltar al catálogo
+    </a>
+
     <!-- Top Announcement Bar -->
     <div class="bg-nalessa-dark text-nalessa-blush text-xs py-2 px-4 text-center font-medium tracking-widest uppercase flex items-center justify-center gap-3 border-b border-nalessa-gold/20">
         <span><i class="fa-solid fa-truck-fast text-nalessa-gold mr-1"></i> Envíos Seguros a Todo el País</span>
@@ -202,11 +209,18 @@
                 <!-- Search & Cart Buttons -->
                 <div class="flex items-center space-x-4">
                     <div class="relative hidden sm:block">
-                        <input type="text" id="searchInput" oninput="syncAndFilter(this.value)" placeholder="Buscar perfume, calzado..." class="bg-white border border-nalessa-blush rounded-full text-xs py-2 pl-9 pr-4 text-nalessa-dark placeholder-gray-400 focus:outline-none focus:border-nalessa-gold w-36 lg:w-48 transition-all">
+                        <input type="search" id="searchInput" aria-label="Buscar productos" oninput="syncAndFilter(this.value)" placeholder="Buscar perfume, calzado..." class="bg-white border border-nalessa-blush rounded-full text-xs py-2 pl-9 pr-4 text-nalessa-dark placeholder-gray-400 focus:outline-none focus:border-nalessa-gold w-36 lg:w-48 transition-all">
                         <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-400 text-xs"></i>
                     </div>
 
-                    <button onclick="toggleCart()" class="relative p-2 text-nalessa-dark hover:text-nalessa-gold transition-colors" title="Ver Carrito">
+                    <button onclick="showFavorites()" class="relative p-2 text-nalessa-dark hover:text-nalessa-gold transition-colors" title="Ver favoritos" aria-label="Ver productos favoritos">
+                        <i class="fa-regular fa-heart text-xl"></i>
+                        <span id="favoritesBadge" class="hidden absolute -top-1 -right-1 bg-nalessa-plum text-white text-[10px] font-bold min-w-5 h-5 px-1 rounded-full items-center justify-center border border-white">
+                            0
+                        </span>
+                    </button>
+
+                    <button onclick="toggleCart()" class="relative p-2 text-nalessa-dark hover:text-nalessa-gold transition-colors" title="Ver carrito" aria-label="Abrir carrito de compras">
                         <i class="fa-solid fa-bag-shopping text-xl"></i>
                         <span id="cartBadge" class="absolute -top-1 -right-1 bg-nalessa-dark text-nalessa-gold text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-nalessa-gold">
                             0
@@ -223,7 +237,7 @@
         <!-- Mobile Nav Menu -->
         <div id="mobileMenu" class="hidden xl:hidden bg-white/90 backdrop-blur-xl border-b border-nalessa-blush px-4 pt-3 pb-6 space-y-3">
             <div class="mb-3">
-                <input type="text" id="mobileSearchInput" oninput="syncAndFilter(this.value)" placeholder="Buscar productos..." class="w-full bg-nalessa-soft border border-nalessa-blush rounded-lg text-sm py-2 px-3 text-nalessa-dark">
+                <input type="search" id="mobileSearchInput" aria-label="Buscar productos" oninput="syncAndFilter(this.value)" placeholder="Buscar productos..." class="w-full bg-nalessa-soft border border-nalessa-blush rounded-lg text-sm py-2 px-3 text-nalessa-dark">
             </div>
             <a href="#inicio" onclick="toggleMobileMenu()" class="block text-nalessa-dark font-medium hover:text-nalessa-gold">Inicio</a>
             <a href="#beneficios" onclick="toggleMobileMenu()" class="block text-nalessa-dark font-medium hover:text-nalessa-gold">¿Por qué Nalessa?</a>
@@ -289,7 +303,7 @@
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-md">
                         <div class="hero-glass bg-gradient-to-b from-nalessa-plum to-nalessa-dark p-3 rounded-3xl border border-white/15 shadow-2xl overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800" alt="Productos Nalessa Collection" class="w-full h-80 object-cover rounded-2xl">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800" alt="Productos Nalessa Collection" fetchpriority="high" decoding="async" class="w-full h-80 object-cover rounded-2xl">
                             <div class="p-4 text-center">
                                 <span class="text-[10px] tracking-[0.3em] uppercase text-nalessa-gold font-semibold">Selección NALESSA</span>
                                 <h3 class="text-xl font-serif text-white mt-0.5">Lujo Accesible & Cuidado Personal</h3>
@@ -366,7 +380,7 @@
                 <div class="bg-white rounded-3xl p-6 border border-nalessa-blush shadow-sm flex flex-col justify-between group hover:border-nalessa-gold transition-all">
                     <div>
                         <div class="relative overflow-hidden rounded-2xl h-56 bg-nalessa-soft mb-4">
-                            <img src="imagenes/coach-blue.jpg" alt="Perfume Coach Blue" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="imagenes/coach-blue.jpg" alt="Perfume Coach Blue" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 left-3 bg-nalessa-plum text-nalessa-gold text-[10px] font-bold px-3 py-1 rounded-full uppercase">Top Perfume</span>
                         </div>
                         <span class="text-[10px] text-nalessa-gold font-bold uppercase tracking-widest block">Coach New York</span>
@@ -385,7 +399,7 @@
                 <div class="bg-white rounded-3xl p-6 border border-nalessa-blush shadow-sm flex flex-col justify-between group hover:border-nalessa-gold transition-all">
                     <div>
                         <div class="relative overflow-hidden rounded-2xl h-56 bg-nalessa-soft mb-4">
-                            <img src="imagenes/stil-confort.jpg" alt="Perfume Coach Blue" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="imagenes/stil-confort.jpg" alt="Stilettos Confort Borgoña Vizzano" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 left-3 bg-nalessa-rose text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Calzado Estrellas</span>
                         </div>
                         <span class="text-[10px] text-nalessa-gold font-bold uppercase tracking-widest block">Vizzano Brasil</span>
@@ -404,7 +418,7 @@
                 <div class="bg-white rounded-3xl p-6 border border-nalessa-blush shadow-sm flex flex-col justify-between group hover:border-nalessa-gold transition-all">
                     <div>
                         <div class="relative overflow-hidden rounded-2xl h-56 bg-nalessa-soft mb-4">
-                            <img src="imagenes/hydro-boost.jpg" alt="Perfume Coach Blue" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="imagenes/hydro-boost.jpg" alt="Neutrogena Hydro Boost Water Gel" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Skincare Favorito</span>
                         </div>
                         <span class="text-[10px] text-nalessa-gold font-bold uppercase tracking-widest block">Neutrogena Clinical</span>
@@ -512,7 +526,7 @@
             <!-- Direct Interactive Catalog Search Bar -->
             <div class="max-w-xl mx-auto relative">
                 <div class="relative flex items-center">
-                    <input type="text" id="catalogSearchInput" oninput="syncAndFilter(this.value)" placeholder="Buscar por nombre o marca (ej: Coach, Vizzano, Neutrogena, Hugo Boss...)" class="w-full bg-nalessa-soft border border-nalessa-blush rounded-full text-xs sm:text-sm py-3.5 pl-11 pr-10 text-nalessa-dark placeholder-gray-400 focus:outline-none focus:border-nalessa-gold shadow-inner transition-all">
+                    <input type="search" id="catalogSearchInput" aria-label="Buscar en el catálogo" oninput="syncAndFilter(this.value)" placeholder="Buscar por nombre o marca (ej: Coach, Vizzano, Neutrogena, Hugo Boss...)" class="w-full bg-nalessa-soft border border-nalessa-blush rounded-full text-xs sm:text-sm py-3.5 pl-11 pr-10 text-nalessa-dark placeholder-gray-400 focus:outline-none focus:border-nalessa-gold shadow-inner transition-all">
                     <i class="fa-solid fa-magnifying-glass absolute left-4 text-nalessa-rose text-sm"></i>
                     <button onclick="clearCatalogSearch()" id="clearSearchBtn" class="hidden absolute right-3.5 text-gray-400 hover:text-nalessa-dark text-xs p-1">
                         <i class="fa-solid fa-xmark"></i>
@@ -524,7 +538,7 @@
             <div class="flex items-center justify-between gap-3 flex-wrap pt-3 border-t border-nalessa-blush/60">
                 <div class="flex items-center gap-2 flex-wrap">
                     <button onclick="setCategoryFilter('all')" id="cfilter-all" class="category-btn active bg-nalessa-plum text-white text-xs font-medium px-5 py-2.5 rounded-full transition-all shadow-sm">
-                        Todos los Cuadros
+                        Todos los productos
                     </button>
                     <button onclick="setCategoryFilter('perfumes')" id="cfilter-perfumes" class="category-btn bg-nalessa-soft border border-nalessa-blush text-nalessa-dark hover:border-nalessa-gold text-xs font-medium px-5 py-2.5 rounded-full transition-all">
                         <i class="fa-solid fa-spray-can text-nalessa-rose mr-1.5"></i> Perfumería
@@ -555,7 +569,7 @@
         </div>
 
         <!-- PRODUCTS GRID (CUADROS) -->
-        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div id="productsGrid" aria-live="polite" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <!-- Populated dynamically via JS -->
         </div>
 
@@ -827,6 +841,17 @@
                     <p class="text-xs text-gray-400 leading-relaxed font-light">
                         Boutique de perfumería, skincare y calzado con catálogo curado, atención personalizada y pedidos en Honduras.
                     </p>
+                    <div>
+                        <span class="text-[10px] font-bold text-nalessa-gold uppercase tracking-widest block mb-2">Síguenos</span>
+                        <div class="flex items-center gap-2">
+                            <a href="https://www.instagram.com/nalessa.collection/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de NALESSA" title="Instagram" class="w-10 h-10 rounded-full border border-nalessa-gold/35 bg-white/5 text-nalessa-blush hover:bg-nalessa-gold hover:text-nalessa-dark flex items-center justify-center transition-all">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                            <a href="https://wa.me/50488589904?text=Hola%20NALESSA%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20productos" target="_blank" rel="noopener noreferrer" aria-label="Contactar a NALESSA por WhatsApp" title="WhatsApp" class="w-10 h-10 rounded-full border border-nalessa-gold/35 bg-white/5 text-nalessa-blush hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div>
@@ -842,7 +867,8 @@
                 <div>
                     <h4 class="text-xs font-bold text-nalessa-gold uppercase tracking-widest mb-4">Contacto Directo</h4>
                     <ul class="space-y-2 text-xs text-gray-400">
-                        <li><a href="https://wa.me/50488589904" target="_blank" rel="noopener" class="hover:text-white"><i class="fa-brands fa-whatsapp text-nalessa-gold mr-2"></i> WhatsApp: +504 8858-9904</a></li>
+                        <li><a href="https://wa.me/50488589904" target="_blank" rel="noopener noreferrer" class="hover:text-white"><i class="fa-brands fa-whatsapp text-nalessa-gold mr-2"></i> WhatsApp: +504 8858-9904</a></li>
+                        <li><a href="https://www.instagram.com/nalessa.collection/" target="_blank" rel="noopener noreferrer" class="hover:text-white"><i class="fa-brands fa-instagram text-nalessa-gold mr-2"></i> @nalessa.collection</a></li>
                         <li><i class="fa-solid fa-envelope text-nalessa-gold mr-2"></i> nalessa.collection@gmail.com</li>
                         <li><i class="fa-solid fa-location-dot text-nalessa-gold mr-2"></i> Envíos a todo el país</li>
                     </ul>
@@ -872,6 +898,8 @@
                     <a href="#beneficios" class="hover:text-white">Garantía de Autenticidad</a>
                     <span>•</span>
                     <a href="https://nicolemusa.blogspot.com/" target="_blank" rel="noopener" class="hover:text-white">Blog</a>
+                    <span>•</span>
+                    <button type="button" onclick="openPrivacyModal()" class="hover:text-white">Política de privacidad</button>
                 </div>
             </div>
         </div>
@@ -934,14 +962,14 @@
     </div>
 
     <!-- PRODUCT QUICK VIEW DETAIL MODAL -->
-    <div id="quickViewModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4">
+    <div id="quickViewModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
         <div class="fixed inset-0 bg-nalessa-dark/80 backdrop-blur-sm" onclick="closeQuickView()"></div>
-        <div class="relative bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-nalessa-blush z-10 my-8">
-            <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gray-400 hover:text-nalessa-dark text-xl">
+        <div class="relative bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-nalessa-blush z-10 my-8">
+            <button id="quickViewCloseBtn" onclick="closeQuickView()" aria-label="Cerrar detalles del producto" class="absolute top-4 right-4 text-gray-400 hover:text-nalessa-dark text-xl p-1">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <div id="quickViewContent" class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+            <div id="quickViewContent" class="space-y-6">
                 <!-- Populated dynamically via JS -->
             </div>
         </div>
@@ -1137,12 +1165,49 @@
         </div>
     </div>
 
+    <!-- PRIVACY POLICY MODAL -->
+    <div id="privacyModal" class="fixed inset-0 z-[60] overflow-y-auto hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+        <div class="fixed inset-0 bg-nalessa-dark/80 backdrop-blur-sm" onclick="closePrivacyModal()"></div>
+        <div class="relative bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-nalessa-blush z-10 my-8">
+            <button id="privacyCloseBtn" type="button" onclick="closePrivacyModal()" aria-label="Cerrar política de privacidad" class="absolute top-4 right-4 text-gray-400 hover:text-nalessa-dark text-xl p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="space-y-5 pr-4">
+                <div>
+                    <span class="text-[10px] text-nalessa-gold font-bold uppercase tracking-[0.25em]">NALESSA Collection</span>
+                    <h3 id="privacyTitle" class="text-3xl font-serif font-bold text-nalessa-dark mt-1">Política de privacidad</h3>
+                    <p class="text-xs text-gray-500 mt-1">Última actualización: agosto de 2026.</p>
+                </div>
+
+                <div class="space-y-4 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    <section>
+                        <h4 class="font-bold text-nalessa-dark mb-1">Información utilizada para el pedido</h4>
+                        <p>Los datos de contacto y entrega se utilizan para preparar el resumen del pedido y facilitar su coordinación. Los campos de tarjeta se validan únicamente durante el proceso y se limpian al finalizar; no se incluyen en el comprobante, no se guardan en el navegador y no se envían por WhatsApp.</p>
+                    </section>
+                    <section>
+                        <h4 class="font-bold text-nalessa-dark mb-1">Preferencias guardadas en este dispositivo</h4>
+                        <p>El carrito, la lista de favoritos y métricas básicas de interacción pueden conservarse localmente en el navegador para mantener la experiencia entre visitas. Esta información puede eliminarse borrando los datos del sitio desde la configuración del navegador.</p>
+                    </section>
+                    <section>
+                        <h4 class="font-bold text-nalessa-dark mb-1">Servicios externos</h4>
+                        <p>Los enlaces a WhatsApp, Instagram y el blog abren servicios externos que aplican sus propias políticas de privacidad. NALESSA no solicita contraseñas ni códigos de acceso de esas plataformas.</p>
+                    </section>
+                    <section>
+                        <h4 class="font-bold text-nalessa-dark mb-1">Contacto</h4>
+                        <p>Para consultas sobre privacidad, escribe a <a href="mailto:nalessa.collection@gmail.com" class="font-semibold text-nalessa-plum underline underline-offset-2">nalessa.collection@gmail.com</a> o comunícate por WhatsApp al +504 8858-9904.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- TOAST NOTIFICATION CONTAINER -->
     <a href="https://wa.me/50488589904?text=Hola%20NALESSA%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20productos" target="_blank" rel="noopener" aria-label="Contactar a NALESSA por WhatsApp" class="fixed bottom-5 left-5 w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-2xl flex items-center justify-center text-2xl z-40 transition-transform hover:scale-105">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <div id="toast" class="fixed bottom-5 right-5 bg-nalessa-dark text-white px-5 py-3 rounded-2xl shadow-2xl border border-nalessa-gold/40 text-xs font-semibold flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 z-50">
+    <div id="toast" role="status" aria-live="polite" class="fixed bottom-5 right-5 bg-nalessa-dark text-white px-5 py-3 rounded-2xl shadow-2xl border border-nalessa-gold/40 text-xs font-semibold flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 z-50">
         <i class="fa-solid fa-circle-check text-nalessa-gold text-base"></i>
         <span id="toastMessage">Producto añadido al carrito</span>
     </div>
@@ -1337,12 +1402,20 @@
 
         // STATE VARIABLES
         let cart = [];
+        let favorites = [];
+        let favoritesOnly = false;
         let currentCategory = 'all';
         let activeSelectedRoutine = null;
         let lastTrackedSearch = '';
+        let currentQuickViewProductId = null;
+        let lastFocusedElement = null;
 
         function saveCart() {
             localStorage.setItem('nalessaCart', JSON.stringify(cart));
+        }
+
+        function saveFavorites() {
+            localStorage.setItem('nalessaFavorites', JSON.stringify(favorites));
         }
 
         function trackMetric(metric) {
@@ -1358,18 +1431,30 @@
             } catch (error) {
                 cart = [];
             }
+            try {
+                favorites = JSON.parse(localStorage.getItem('nalessaFavorites')) || [];
+                favorites = favorites.map(Number).filter(id => products.some(p => p.id === id));
+            } catch (error) {
+                favorites = [];
+            }
             renderProducts();
             calculateProfit();
             updateCartUI();
+            updateFavoritesUI();
             trackMetric('pageViews');
+
+            const sharedProductId = Number(new URLSearchParams(window.location.search).get('producto'));
+            if (sharedProductId && products.some(p => p.id === sharedProductId)) {
+                setTimeout(() => openQuickView(sharedProductId), 150);
+            }
         });
 
         document.addEventListener('keydown', (event) => {
             if (event.key !== 'Escape') return;
-            document.getElementById('quickViewModal').classList.add('hidden');
-            document.getElementById('receiptModal').classList.add('hidden');
-            document.getElementById('cartDrawer').classList.add('hidden');
-            document.getElementById('mobileMenu').classList.add('hidden');
+            ['quickViewModal', 'receiptModal', 'checkoutModal', 'privacyModal', 'cartDrawer', 'mobileMenu'].forEach(id => {
+                document.getElementById(id)?.classList.add('hidden');
+            });
+            lastFocusedElement?.focus?.();
         });
 
         // RENDER PRODUCTS GRID IN CUADROS / CARDS
@@ -1386,11 +1471,13 @@
 
             let filtered = products.filter(p => {
                 const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+                const matchesFavorites = !favoritesOnly || favorites.includes(p.id);
                 const matchesSearch = !searchVal || 
                                       p.name.toLowerCase().includes(searchVal) || 
                                       p.brand.toLowerCase().includes(searchVal) || 
-                                      p.description.toLowerCase().includes(searchVal);
-                return matchesCategory && matchesSearch;
+                                      p.description.toLowerCase().includes(searchVal) ||
+                                      p.category.toLowerCase().includes(searchVal);
+                return matchesCategory && matchesFavorites && matchesSearch;
             });
 
             if(sortVal === 'price-asc') {
@@ -1405,10 +1492,10 @@
                 grid.innerHTML = `
                     <div class="col-span-full py-12 text-center text-gray-500 bg-white/80 rounded-3xl border border-nalessa-blush p-6 backdrop-blur-xl">
                         <i class="fa-solid fa-magnifying-glass text-4xl text-nalessa-gold mb-3"></i>
-                        <p class="font-serif text-lg text-nalessa-dark font-bold">No se encontraron productos en cuadros para "${searchVal}"</p>
-                        <p class="text-xs text-gray-400 mt-1">Intenta buscar por marca (ej: Coach, Vizzano, Neutrogena, Oriflame).</p>
-                        <button onclick="clearCatalogSearch()" class="mt-4 bg-nalessa-plum text-white text-xs font-semibold px-5 py-2 rounded-full hover:bg-nalessa-dark transition-all">
-                            Limpiar Búsqueda
+                        <p class="font-serif text-lg text-nalessa-dark font-bold">${favoritesOnly ? 'Aún no tienes productos favoritos' : `No se encontraron productos para "${escapeHtml(searchVal)}"`}</p>
+                        <p class="text-xs text-gray-400 mt-1">${favoritesOnly ? 'Presiona el corazón de cualquier producto para guardarlo aquí.' : 'Intenta buscar por nombre, marca o categoría.'}</p>
+                        <button onclick="${favoritesOnly ? 'showFavorites()' : 'clearCatalogSearch()'}" class="mt-4 bg-nalessa-plum text-white text-xs font-semibold px-5 py-2 rounded-full hover:bg-nalessa-dark transition-all">
+                            ${favoritesOnly ? 'Ver todos los productos' : 'Limpiar búsqueda'}
                         </button>
                     </div>
                 `;
@@ -1425,11 +1512,15 @@
                         <div>
                             <!-- Card Header Image Container -->
                             <div class="relative overflow-hidden h-52 bg-nalessa-soft">
-                                <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 
                                 <span class="absolute top-3 left-3 bg-nalessa-dark/90 text-nalessa-gold text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-xs">
                                     ${p.badge}
                                 </span>
+
+                                <button onclick="toggleFavorite(${p.id}, event)" class="absolute top-3 right-3 ${favorites.includes(p.id) ? 'bg-nalessa-plum text-white' : 'bg-white/90 text-nalessa-dark'} hover:bg-nalessa-gold hover:text-nalessa-dark text-xs w-9 h-9 rounded-full shadow-md backdrop-blur-sm transition-all flex items-center justify-center" title="${favorites.includes(p.id) ? 'Quitar de favoritos' : 'Agregar a favoritos'}" aria-label="${favorites.includes(p.id) ? 'Quitar' : 'Agregar'} ${p.name} ${favorites.includes(p.id) ? 'de' : 'a'} favoritos">
+                                    <i class="${favorites.includes(p.id) ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
+                                </button>
 
                                 <button onclick="openQuickView(${p.id})" class="absolute bottom-3 right-3 bg-white/90 text-nalessa-dark hover:bg-nalessa-gold text-xs p-2.5 rounded-full shadow-md backdrop-blur-sm transition-all" title="Vista Rápida">
                                     <i class="fa-solid fa-eye"></i>
@@ -1468,48 +1559,163 @@
             }).join('');
         }
 
+        // FAVORITES
+        function updateFavoritesUI() {
+            const badge = document.getElementById('favoritesBadge');
+            if (!badge) return;
+            badge.textContent = favorites.length;
+            badge.classList.toggle('hidden', favorites.length === 0);
+            badge.classList.toggle('flex', favorites.length > 0);
+        }
+
+        function toggleFavorite(id, event) {
+            event?.stopPropagation?.();
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(favoriteId => favoriteId !== id);
+                showToast(`${product.name} eliminado de favoritos`);
+            } else {
+                favorites.push(id);
+                trackMetric('favoritesAdded');
+                showToast(`${product.name} guardado en favoritos`);
+            }
+
+            saveFavorites();
+            updateFavoritesUI();
+            renderProducts();
+
+            if (currentQuickViewProductId === id && !document.getElementById('quickViewModal').classList.contains('hidden')) {
+                openQuickView(id, false);
+            }
+        }
+
+        function showFavorites() {
+            favoritesOnly = !favoritesOnly;
+            currentCategory = 'all';
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-nalessa-plum', 'text-white');
+                btn.classList.add('bg-nalessa-soft', 'text-nalessa-dark', 'border-nalessa-blush');
+            });
+            const allBtn = document.getElementById('cfilter-all');
+            if (allBtn && !favoritesOnly) {
+                allBtn.classList.add('active', 'bg-nalessa-plum', 'text-white');
+                allBtn.classList.remove('bg-nalessa-soft', 'text-nalessa-dark');
+            }
+            renderProducts();
+            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+            showToast(favoritesOnly ? 'Mostrando tus productos favoritos' : 'Mostrando todos los productos');
+        }
+
         // QUICK VIEW MODAL FOR PRODUCTS
-        function openQuickView(id) {
+        function openQuickView(id, rememberFocus = true) {
             const p = products.find(item => item.id === id);
             if(!p) return;
 
+            if (rememberFocus) lastFocusedElement = document.activeElement;
+            currentQuickViewProductId = id;
+            const isFavorite = favorites.includes(id);
+            const related = products.filter(item => item.category === p.category && item.id !== p.id).slice(0, 3);
+
             const modalContent = document.getElementById('quickViewContent');
             modalContent.innerHTML = `
-                <div class="relative overflow-hidden rounded-2xl h-72 bg-nalessa-soft">
-                    <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 bg-nalessa-plum text-nalessa-gold text-[10px] font-bold px-3 py-1 rounded-full uppercase">
-                        ${p.badge}
-                    </span>
-                </div>
-                
-                <div class="space-y-4">
-                    <div>
-                        <span class="text-[10px] font-bold text-nalessa-gold uppercase tracking-widest">${p.brand}</span>
-                        <h3 class="text-2xl font-serif font-bold text-nalessa-dark mt-0.5">${p.name}</h3>
-                        <span class="text-2xl font-serif font-bold text-nalessa-plum block mt-2">L ${p.price.toLocaleString('es-HN')}</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                    <div class="relative overflow-hidden rounded-2xl h-72 bg-nalessa-soft">
+                        <img src="${p.image}" alt="${p.name}" decoding="async" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-nalessa-plum text-nalessa-gold text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                            ${p.badge}
+                        </span>
                     </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-[10px] font-bold text-nalessa-gold uppercase tracking-widest">${p.brand}</span>
+                            <h3 id="quickViewTitle" class="text-2xl font-serif font-bold text-nalessa-dark mt-0.5">${p.name}</h3>
+                            <span class="text-2xl font-serif font-bold text-nalessa-plum block mt-2">L ${p.price.toLocaleString('es-HN')}</span>
+                        </div>
 
-                    <div class="space-y-2 text-xs text-gray-600 border-y border-nalessa-blush py-3">
-                        <p><strong>Descripción:</strong> ${p.description}</p>
-                        <p><strong>Detalles Técnicos:</strong> ${p.details}</p>
-                        <p class="text-emerald-700 font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Disponible en Stock - Envío inmediato 24h</p>
+                        <div class="space-y-2 text-xs text-gray-600 border-y border-nalessa-blush py-3">
+                            <p><strong>Descripción:</strong> ${p.description}</p>
+                            <p><strong>Detalles:</strong> ${p.details}</p>
+                            <p class="text-emerald-700 font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Disponibilidad confirmada al realizar el pedido</p>
+                        </div>
+
+                        <button onclick="addToCart(${p.id}); closeQuickView();" class="w-full bg-nalessa-dark hover:bg-nalessa-plum text-nalessa-gold font-bold py-3.5 rounded-xl uppercase text-xs tracking-wider transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
+                        </button>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="toggleFavorite(${p.id}, event)" class="border border-nalessa-blush hover:border-nalessa-gold text-nalessa-dark font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="${isFavorite ? 'fa-solid text-nalessa-plum' : 'fa-regular'} fa-heart"></i> ${isFavorite ? 'Guardado' : 'Favorito'}
+                            </button>
+                            <button onclick="shareProduct(${p.id})" class="border border-nalessa-blush hover:border-nalessa-gold text-nalessa-dark font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-share-nodes"></i> Compartir
+                            </button>
+                        </div>
                     </div>
-
-                    <button onclick="addToCart(${p.id}); closeQuickView();" class="w-full bg-nalessa-dark hover:bg-nalessa-plum text-nalessa-gold font-bold py-3.5 rounded-xl uppercase text-xs tracking-wider transition-all flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-cart-plus"></i> Añadir este Producto al Carrito
-                    </button>
                 </div>
+
+                ${related.length ? `
+                    <div class="border-t border-nalessa-blush pt-5">
+                        <div class="flex items-end justify-between gap-3 mb-3">
+                            <div>
+                                <span class="text-[9px] text-nalessa-gold font-bold uppercase tracking-widest">También te puede gustar</span>
+                                <h4 class="font-serif text-xl font-bold text-nalessa-dark">Productos relacionados</h4>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            ${related.map(item => `
+                                <button type="button" onclick="openQuickView(${item.id}, false)" class="text-left bg-nalessa-soft/70 border border-nalessa-blush rounded-2xl p-3 hover:border-nalessa-gold transition-all group">
+                                    <img src="${item.image}" alt="${item.name}" loading="lazy" decoding="async" class="w-full h-24 object-cover rounded-xl mb-2 group-hover:opacity-90 transition-opacity">
+                                    <span class="text-[9px] uppercase tracking-wider text-nalessa-gold font-bold">${item.brand}</span>
+                                    <span class="block text-xs font-bold text-nalessa-dark leading-snug mt-0.5">${item.name}</span>
+                                    <span class="block text-sm font-serif font-bold text-nalessa-plum mt-1">L ${item.price.toLocaleString('es-HN')}</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                ` : ''}
             `;
 
             document.getElementById('quickViewModal').classList.remove('hidden');
+            requestAnimationFrame(() => document.getElementById('quickViewCloseBtn')?.focus());
         }
 
         function closeQuickView() {
             document.getElementById('quickViewModal').classList.add('hidden');
+            currentQuickViewProductId = null;
+            lastFocusedElement?.focus?.();
+        }
+
+        async function shareProduct(id) {
+            const product = products.find(item => item.id === id);
+            if (!product) return;
+
+            const url = new URL(window.location.href);
+            url.searchParams.set('producto', product.id);
+            url.hash = 'catalogo';
+            const shareData = {
+                title: `${product.name} | NALESSA`,
+                text: `Mira ${product.name} en el catálogo de NALESSA.`,
+                url: url.toString()
+            };
+
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    window.open(`https://wa.me/?text=${encodeURIComponent(`${shareData.text} ${shareData.url}`)}`, '_blank', 'noopener');
+                }
+                trackMetric('productsShared');
+            } catch (error) {
+                if (error?.name !== 'AbortError') showToast('No fue posible compartir el producto');
+            }
         }
 
         // CATEGORY & SEARCH SYNC
         function setCategoryFilter(cat) {
+            favoritesOnly = false;
             currentCategory = cat;
             document.querySelectorAll('.category-btn').forEach(btn => {
                 btn.classList.remove('active', 'bg-nalessa-plum', 'text-white');
@@ -1566,7 +1772,7 @@
                     <div>
                         <span class="text-[10px] font-bold text-nalessa-rose uppercase tracking-wider block">${s.step}</span>
                         <div class="h-36 overflow-hidden rounded-xl bg-white my-2">
-                            <img src="${s.image}" alt="${s.name}" class="w-full h-full object-cover">
+                            <img src="${s.image}" alt="${s.name}" loading="lazy" decoding="async" class="w-full h-full object-cover">
                         </div>
                         <h4 class="font-bold text-xs text-nalessa-dark leading-snug">${s.name}</h4>
                     </div>
@@ -1672,7 +1878,7 @@
 
                 return `
                     <div class="flex items-center gap-3 p-3 bg-nalessa-soft rounded-xl border border-nalessa-blush">
-                        <img src="${item.image}" alt="${item.name}" class="w-14 h-14 object-cover rounded-lg flex-shrink-0">
+                        <img src="${item.image}" alt="${item.name}" loading="lazy" decoding="async" class="w-14 h-14 object-cover rounded-lg flex-shrink-0">
                         
                         <div class="flex-1 min-w-0">
                             <h4 class="text-xs font-bold text-nalessa-dark truncate">${item.name}</h4>
@@ -1912,6 +2118,27 @@
         }
 
         // UI UTILITIES
+        function escapeHtml(value) {
+            return String(value).replace(/[&<>'"]/g, character => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#039;',
+                '"': '&quot;'
+            })[character]);
+        }
+
+        function openPrivacyModal() {
+            lastFocusedElement = document.activeElement;
+            document.getElementById('privacyModal').classList.remove('hidden');
+            requestAnimationFrame(() => document.getElementById('privacyCloseBtn')?.focus());
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').classList.add('hidden');
+            lastFocusedElement?.focus?.();
+        }
+
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         }

@@ -69,6 +69,8 @@
                 <div class="card metric"><strong id="mCart">0</strong><span>Productos agregados</span></div>
                 <div class="card metric"><strong id="mWhatsApp">0</strong><span>Pedidos a WhatsApp</span></div>
                 <div class="card metric"><strong id="mSubs">0</strong><span>Suscripciones</span></div>
+                <div class="card metric"><strong id="mFavorites">0</strong><span>Favoritos guardados</span></div>
+                <div class="card metric"><strong id="mShared">0</strong><span>Productos compartidos</span></div>
             </div>
             <p class="note">Estas métricas locales permiten revisar el flujo de medición sin recopilar información personal. Para operación comercial se recomienda una plataforma analítica con aviso de privacidad.</p>
         </section>
@@ -160,6 +162,8 @@
         document.getElementById('mCart').textContent = metrics.cartAdds || 0;
         document.getElementById('mWhatsApp').textContent = metrics.whatsappOrders || 0;
         document.getElementById('mSubs').textContent = metrics.subscriptions || 0;
+        document.getElementById('mFavorites').textContent = metrics.favoritesAdded || 0;
+        document.getElementById('mShared').textContent = metrics.productsShared || 0;
 
         function project() {
             const visits = Number(document.getElementById('visits').value) || 0;

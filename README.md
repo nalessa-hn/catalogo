@@ -37,6 +37,23 @@ Los pedidos se envían al número `+504 8858-9904`. En el código se utiliza el 
 
 Los enlaces **Blog** del menú y del pie de página abren `https://nicolemusa.blogspot.com/` en una pestaña nueva.
 
+## Redes sociales
+
+El pie de página incluye accesos oficiales a Instagram (`@nalessa.collection`) y WhatsApp (`+504 8858-9904`). El botón flotante de WhatsApp se conserva para consultas rápidas.
+
+## Favoritos, compartir y productos relacionados
+
+- El corazón de cada tarjeta guarda productos favoritos en el navegador del visitante.
+- El corazón del encabezado muestra la lista guardada.
+- La vista rápida permite compartir cada producto desde el teléfono o por WhatsApp.
+- La misma ventana muestra productos relacionados de la categoría seleccionada.
+
+Estas preferencias permanecen únicamente en el dispositivo y no requieren crear una cuenta.
+
+## Privacidad
+
+El enlace **Política de privacidad** del pie de página explica el uso de la información del pedido, las preferencias guardadas en el dispositivo y los enlaces a servicios externos.
+
 ## Gestión del pedido
 
 El flujo registra la información de entrega, valida el formato de la tarjeta y genera un resumen con número de pedido. Los campos financieros se limpian automáticamente al finalizar.
