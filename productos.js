@@ -27,7 +27,7 @@ window.NALESSA_PRODUCTS = [
         price: 1500,
         badge: "Original 100 ml",
         rating: 5,
-        image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600",
+        image: "imagenes/boss-select.jpg",
         description: "Elegancia masculina con notas de toronja, hojas de cedro, geranio y pimienta rosa.",
         details: "Presentación de 100 ml. Ideal para ocasiones formales y uso diario."
     },
